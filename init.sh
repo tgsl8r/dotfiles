@@ -7,17 +7,14 @@ sudo pacman -Syu
 sudo pacman -S --needed base-devel
 sudo pacman -S git curl
 
-# Install paru
-# rustup
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-# paru
-git clone https://aur.archlinux.org/paru.git /tmp/paru
-cd /tmp/paru/
-makepkg -si /tmp/paru
+# pikaur
+git clone https://aur.archlinux.org/pikaur.git
+cd pikaur
+makepkg -fsri
 
 # Install zsh and change shell
-paru -Syu
-paru -S zsh ttf-firacode-nerd
+pikaur -Syu
+pikaur -S zsh ttf-firacode-nerd
 chsh -s /bin/zsh
 
 # Install zap
