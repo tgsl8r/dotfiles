@@ -42,6 +42,7 @@ path=(
 )
 
 # Apps
+export TERMINAL=alacritty
 export EDITOR=nvim
 export VISUAL=code
 export PAGER=less
