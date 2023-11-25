@@ -15,7 +15,7 @@ export XDG_PROJECTS_DIR=~/projects
 # Custom
 export GNUPGHOME=$XDG_DATA_HOME/gnupg
 export REPO_HOME=$XDG_CACHE_HOME/repos
-export DOTFILES=$XDG_REPO_HOME/dotfiles
+export DOTFILES=$REPO_HOME/dotfiles
 
 # Ensure path arrays do not contain duplicates.
 typeset -gU fpath path cdpath
