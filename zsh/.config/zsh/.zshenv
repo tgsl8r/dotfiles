@@ -42,7 +42,7 @@ path=(
 )
 
 # Apps
-export TERMINAL=alacritty
+export TERMINAL=/usr/bin/alacritty
 export EDITOR=nvim
 export VISUAL=code
 export PAGER=less
