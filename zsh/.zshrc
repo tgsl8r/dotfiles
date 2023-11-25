@@ -2,4 +2,5 @@
 # Sets zdotdir and sources .zshenv from it
 
 export ZDOTDIR=~/.config/zsh
+[[ -f $ZDOTDIR/.zshenv ]] && . $ZDOTDIR/.zshenv
 [[ -f $ZDOTDIR/.zshrc ]] && . $ZDOTDIR/.zshrc
