@@ -6,24 +6,18 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 # Load and initialise completion system
+zstyle :compinstall filename '/home/toby/.zshrc'
 autoload -Uz compinit
 compinit
 
-# Lines configured by zsh-newuser-install
+# Shell options
 HISTFILE=~/.histfile
 HISTSIZE=1000
 SAVEHIST=10000
 setopt autocd
 unsetopt beep
 bindkey -e
-# End of lines configured by zsh-newuser-install
 
-# The following lines were added by compinstall
-zstyle :compinstall filename '/home/toby/.zshrc'
-
-autoload -Uz compinit
-compinit
-# End of lines added by compinstall
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh
