@@ -14,7 +14,7 @@ makepkg -fsri
 
 # Install zsh and change shell
 pikaur -Syu
-pikaur -S zsh ttf-firacode-nerd
+pikaur -S zsh ttf-firacode-nerd neovim qutebrowser
 chsh -s /bin/zsh
 
 # Install zap
