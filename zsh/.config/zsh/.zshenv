@@ -10,18 +10,19 @@ export XDG_CACHE_HOME=~/.cache
 export XDG_DATA_HOME=~/.local/share
 export XDG_STATE_HOME=~/.local/state
 export XDG_RUNTIME_DIR=~/.xdg
-export XDG_PROJECTS_DIR=~/Projects
+export XDG_PROJECTS_DIR=~/projects
 
 # Custom
-export DOTFILES=$XDG_HOME/dotfiles
 export GNUPGHOME=$XDG_DATA_HOME/gnupg
 export REPO_HOME=$XDG_CACHE_HOME/repos
+export DOTFILES=$XDG_REPO_HOME/dotfiles
 
 # Ensure path arrays do not contain duplicates.
 typeset -gU fpath path cdpath
 
 # Set the list of directories that cd searches.
 cdpath=(
+  $DOTFILES
   $XDG_PROJECTS_DIR(N/)
   $XDG_PROJECTS_DIR/tslater(N/)
   $XDG_PROJECTS_DIR/obc(N/)
