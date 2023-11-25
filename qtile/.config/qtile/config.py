@@ -100,7 +100,8 @@ keys = [
         ),
     Key([], "XF86AudioMicMute",
         lazy.spawn(home + "/.local/bin/system/volumectl micmute"),
-        desc='Mute mic')
+        desc='Mute mic'
+        ),
 
     # Media keys
     Key([], "XF86AudioPlay",
