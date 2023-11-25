@@ -1,6 +1,6 @@
 #!/bin/bash
-
 lock="swaylock -f -i ~/.cache/wallpaper"
+
 #lock="swaylock -f -i ~/.cache/wallpaper --effect-blur 10x5 --clock --indicator"
 
 #### Options ###
