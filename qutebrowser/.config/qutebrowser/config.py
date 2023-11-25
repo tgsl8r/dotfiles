@@ -123,9 +123,9 @@ c.tabs.padding = {'bottom': 4, 'left': 5, 'right': 5, 'top': 2}
 
 c.tabs.select_on_remove = 'prev'
 
-c.fonts.default_family = 'Fira Nerd Font'
+c.fonts.default_family = 'FiraCode Nerd Font'
 c.fonts.default_size = '10pt'
-c.fonts.web.family.standard = 'Fira Nerd Font'
+c.fonts.web.family.standard = 'FiraCode Nerd Font'
 c.fonts.web.size.default = 14
 
 # Font used for the context menu. If set to null, the Qt default is
