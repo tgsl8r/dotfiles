@@ -1,1 +1,10 @@
+# Python stuff
 __pycache__/
+
+# Secret stuff
+.env
+.secret
+
+# Zsh stuff
+.zcompdump
+.zsh_history
