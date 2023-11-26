@@ -21,16 +21,16 @@ case $chosen in
         $lock 
         ;;    
     "$power_off")
-        loginctl poweroff
+        systemctl poweroff
         ;;
     "$reboot")
-        loginctl reboot
+        systemctl reboot
         ;;
     "$suspend")
-        $lock && loginctl suspend
+        $lock && systemctl suspend
         ;;
     "$hibernate")
-        $lock && loginctl hibernate
+        $lock && systemctl hibernate
         ;;
     "$log_out")
         #swaymsg exit
