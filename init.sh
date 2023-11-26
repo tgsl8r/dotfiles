@@ -25,6 +25,8 @@ progs=(
 	kanshi
 	swaylock
 	brightnessctl
+	wl-clipboard
+	clipman
 	qt6-wayland
 	qutebrowser
 	mpv

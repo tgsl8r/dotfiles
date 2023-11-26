@@ -33,6 +33,9 @@ kanshi &
 pkill -f dunst
 dunst &
 
+# clipboard
+wl-paste -p -t text --watch clipman store -P --histpath="~/.local/share/clipman-primary.json"
+
 # wlsunset
 # pkill -f wlsunset
 # wlsunset -l 57.4 -L -1.9 &

@@ -176,6 +176,10 @@ keys = [
         lazy.window.kill(),
         desc="Kill focused window"
         ),
+    Key([mod], "v",
+        lazy.spawn('clipman pick --tool=CUSTOM --tool-args="fuzzel -d"'),
+        desc="Paste from clipman"
+        ),
 
     # Fuzzel
     Key(["control"], "space",
