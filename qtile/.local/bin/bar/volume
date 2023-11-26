@@ -6,11 +6,11 @@
 # volumecontrol mute
 
 function get_volume {
-    wpctl get-volume @DEFAULT_AUDIO_SINK@ | cut -c 9-12
+    wpctl get-volume @DEFAULT_AUDIO_SINK@ | cut -d " " -f 2
 }
 
 function is_mute {
-	return 1
+    wpctl get-volume @DEFAULT_AUDIO_SINK@ | grep MUTED > /dev/null
 }
 
 function send_notification {
@@ -72,7 +72,7 @@ case $1 in
 		icon="󰕾"
 	elif [[ $volume -ge "79" && $volume -le "90" ]]; then
 		icon="󰕾"
-	elif [[ $volume -ge "69" && $volume -le "80" ]]; then
+	elif [[ $volume -ge "0.69" && $volume -le "0.80" ]]; then
 		icon="󰖀"
 	elif [[ $volume -ge "59" && $volume -le "70" ]]; then
 		icon="󰖀"
@@ -91,6 +91,8 @@ case $1 in
 	elif [[ $volume -eq "0" ]]; then
 		icon="󰝟"
 		volume=" M "
+	else
+		icon="󰕿"
 	fi
 
 
@@ -99,6 +101,6 @@ if is_mute; then
 		volume="M"
 fi
 
-printf "%s" "$icon $volume%"
+printf "%s" "$icon$volume%"
   ;;
 esac
