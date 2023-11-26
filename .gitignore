@@ -1,3 +1,6 @@
+# Impermanent stuff
+*.log
+
 # Python stuff
 __pycache__/
 
