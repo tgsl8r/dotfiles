@@ -18,6 +18,7 @@ progs=(
 	ttf-firacode-nerd
 	zsh
 	asdf-vm
+	btop
 	bat
 	fzf
 	ranger
