@@ -42,10 +42,10 @@ path=(
 )
 
 # Apps
-export TERMINAL=/usr/bin/alacritty
+export TERMINAL=alacritty
 export EDITOR=nvim
 export VISUAL=code
-export PAGER=less
+export PAGER=bat
 if [[ "$OSTYPE" == darwin* ]]; then
   export BROWSER='open'
 fi

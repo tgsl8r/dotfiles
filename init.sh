@@ -17,6 +17,7 @@ makepkg -fsri
 progs=(
 	ttf-firacode-nerd
 	zsh
+	bat
 	fzf
 	ranger
 	neovim
