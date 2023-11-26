@@ -50,15 +50,15 @@ primary_widgets = [
         execute='alacritty zsh -c "pikaur -Syu"'
     ),
     widget.Spacer(length=5),
-    widget.GenPollText(
-        update_interval=1, 
-        **widget_defaults, 
-        func=lambda: subprocess.check_output(os.path.expanduser("~/.local/bin/bar/idleinhibit")).decode(), 
-        mouse_callbacks=
-        {'Button1': lambda: lazy.spawn(os.path.expanduser("~/.local/bin/bar/idleinhibit toggle"), shell=True)}
-        ),
+#    widget.GenPollText(
+#        update_interval=1, 
+#        **widget_defaults, 
+#        func=lambda: subprocess.check_output(os.path.expanduser("~/.local/bin/bar/idleinhibit")).decode(), 
+#        mouse_callbacks=
+#        {'Button1': lambda: lazy.spawn(os.path.expanduser("~/.local/bin/bar/idleinhibit toggle"), shell=True)}
+#        ),
     widget.Spacer(length=5),
-    widget.KeyboardLayout(configured_keyboards=['us', 'gb']),
+    widget.KeyboardLayout(configured_keyboards=['gb', 'us']),
     widget.Spacer(length=5),
     widget.GenPollText(
         update_interval=1, 
@@ -78,20 +78,20 @@ primary_widgets = [
             'Button3': lambda: lazy.spawn(os.path.expanduser("~/.local/bin/bar/volume up"), shell=True)}),
     widget.Spacer(length=5),
     widget.GenPollText(
-        update_interval=1, 
-        **widget_defaults, 
-        func=lambda: subprocess.check_output(os.path.expanduser("~/.local/bin/bar/battery.py")).decode(), 
-        mouse_callbacks={
-            'Button1': lambda: lazy.spawn(os.path.expanduser("~/.local/bin/bar/battery.py --c left-click"), shell=True)}),
-    widget.Spacer(length=5),
-    widget.GenPollText(
             update_interval=1, 
             **widget_defaults, 
             func=lambda: subprocess.check_output(os.path.expanduser("~/.local/bin/bar/network")).decode(), 
             mouse_callbacks={
                 'Button1': lambda: lazy.spawn(os.path.expanduser("~/.local/bin/bar/network ShowInfo"), shell=True), 
                 'Button3': lambda: lazy.spawn("alacritty -e nmtui", shell=True)}),
-    widget.Spacer(length=10),
+    widget.Spacer(length=5),
+    widget.GenPollText(
+        update_interval=1, 
+        **widget_defaults, 
+        func=lambda: subprocess.check_output(os.path.expanduser("~/.local/bin/bar/battery.py")).decode(), 
+        mouse_callbacks={
+            'Button1': lambda: lazy.spawn(os.path.expanduser("~/.local/bin/bar/battery.py --c left-click"), shell=True)}),
+    widget.Spacer(length=5),
     widget.Clock(
         format="| %Y-%m-%d %a %I:%M %p",
         mouse_callbacks={
