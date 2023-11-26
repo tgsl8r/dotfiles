@@ -20,9 +20,12 @@ progs=(
 	asdf-vm
 	btop
 	bat
+  fd
 	fzf
 	ranger
+  unzip
 	neovim
+  lazygit
 	fuzzel
 	dunst
 	kanshi
