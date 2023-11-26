@@ -22,7 +22,7 @@ typeset -gU fpath path cdpath
 
 # Set the list of directories that cd searches.
 cdpath=(
-  $DOTFILES
+  $REPO_HOME
   $XDG_PROJECTS_DIR(N/)
   $XDG_PROJECTS_DIR/tslater(N/)
   $XDG_PROJECTS_DIR/obc(N/)
