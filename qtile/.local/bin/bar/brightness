@@ -26,13 +26,13 @@ function send_notification {
 case $1 in
   up)
     # increase the backlight by 5%
-    brightnessctl s +5
+    brightnessctl s +15
     send_notification
     canberra-gtk-play -i audio-volume-change
     ;;
   down)
     # decrease the backlight by 5%
-    brightnessctl s 5-
+    brightnessctl s 15-
     send_notification
     canberra-gtk-play -i audio-volume-change
     ;;
