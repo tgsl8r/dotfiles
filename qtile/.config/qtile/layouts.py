@@ -8,7 +8,7 @@ from colors import colors
 layout_theme = {"border_width": 3,
                 "margin": 0,
                 "border_focus": colors['neutral_green'],
-                "border_normal": colors['dark0']
+                "border_normal": colors['dark1']
                 }
 
 layouts = [
