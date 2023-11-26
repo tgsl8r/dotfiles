@@ -8,13 +8,32 @@ sudo pacman -S --needed base-devel
 sudo pacman -S git curl
 
 # pikaur
+cd /tmp
 git clone https://aur.archlinux.org/pikaur.git
 cd pikaur
 makepkg -fsri
 
-# Install zsh and change shell
+# Install progs and change shell
+progs=(
+	ttf-firacode-nerd
+	zsh
+	fzf
+	ranger
+	neovim
+	fuzzel
+	dunst
+	kanshi
+	swaylock
+	brightnessctl
+	qt6-wayland
+	qutebrowser
+	mpv
+	zathura
+	zathura-pdf-poppler
+	bitwarden-cli
+)
 pikaur -Syu
-pikaur -S zsh fzf fuzzel dunst kanshi ttf-firacode-nerd neovim qt6-wayland qutebrowser swaylock ranger mpv zathura zathura-pdf-poppler brightnessctl
+pikaur -S ${progs[@]}
 chsh -s /bin/zsh
 
 # Install zap
