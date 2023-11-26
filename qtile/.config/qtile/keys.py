@@ -182,7 +182,7 @@ keys = [
         ),
 
     # Fuzzel
-    Key(["control"], "space",
+    Key([mod], "space",
         lazy.spawn("fuzzel"),
         desc="Launch Fuzzel menu"
         ),
