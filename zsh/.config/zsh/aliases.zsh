@@ -8,7 +8,7 @@ alias ta="todo.sh add"
 alias tl="todo.sh list"
 alias tla="todo.sh listall"
 alias tdo="todo.sh do"
-alias tpush="shactivate && git -C $HOME/.cache/repos/perfiles add todo/ && git -C $HOME/.cache/repos/perfiles commit -m 'TODO SAVE' && git -C $HOME/.cahce/repos/perfile push"
+alias tpush="shactivate && git -C $HOME/.cache/repos/perfiles add todo/ && git -C $HOME/.cache/repos/perfiles commit -m 'TODO SAVE' && git -C $HOME/.cache/repos/perfiles push"
 
 # Packages
 # Fuzzy search Arch packages with pacman
