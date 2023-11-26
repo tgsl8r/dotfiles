@@ -16,10 +16,10 @@ eval $(ssh-agent)
 ssh-add ~/.ssh/toby-archpad
 
 # Kill any existing pipewire / wireplumber daemons and only then try to start a new set.
-pkill -u "${USER}" -x pipewire\|wireplumber 1>/dev/null 2>&1
-/usr/bin/pipewire &> /dev/null &
-/usr/bin/pipewire-pulse &
-/usr/bin/wireplumber
+# pkill -u "${USER}" -x pipewire\|wireplumber 1>/dev/null 2>&1
+# /usr/bin/pipewire &> /dev/null &
+# /usr/bin/pipewire-pulse &
+# /usr/bin/wireplumber
 
 # Start xdg-desktop-portal-wlr  
 pkill -f /usr/libexec/xdg-desktop-portal-wlr
