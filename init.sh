@@ -14,7 +14,7 @@ makepkg -fsri
 
 # Install zsh and change shell
 pikaur -Syu
-pikaur -S zsh fzf fuzzel dunst kanshi ttf-firacode-nerd neovim qt6-wayland qutebrowser swaylock ranger mpv zathura zathura-pdf-poppler
+pikaur -S zsh fzf fuzzel dunst kanshi ttf-firacode-nerd neovim qt6-wayland qutebrowser swaylock ranger mpv zathura zathura-pdf-poppler brightnessctl
 chsh -s /bin/zsh
 
 # Install zap
