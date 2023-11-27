@@ -24,6 +24,11 @@ async def outputs_changed():
     logger.warning("Reloading config...")
     qtile.reload_config()
 
+# Show cursor on mouse wiggle (may not work with one widow open)
+@hook.subscribe.client_mouse_enter
+def client_mouse_enter(client):
+    qtile.core.unhide_cursor()
+
 
 # Work around for matching Spotify
 @hook.subscribe.client_new

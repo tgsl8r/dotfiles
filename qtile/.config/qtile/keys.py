@@ -180,6 +180,10 @@ keys = [
         lazy.spawn('clipman pick --tool=CUSTOM --tool-args="fuzzel -d"'),
         desc="Paste from clipman"
         ),
+    Key([mod], "m",
+        lazy.core.hide_cursor(),
+        desc="Hide mouse cursor"
+        ),
 
     # Fuzzel
     Key([mod], "space",
