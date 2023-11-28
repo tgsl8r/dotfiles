@@ -6,77 +6,77 @@
 # volumecontrol mute
 
 function get_volume {
-    wpctl get-volume @DEFAULT_AUDIO_SINK@ | cut -d " " -f 2
+	wpctl get-volume @DEFAULT_AUDIO_SINK@ | cut -d " " -f 2
 }
 
 function is_mute {
-    wpctl get-volume @DEFAULT_AUDIO_SINK@ | grep MUTED > /dev/null
+	wpctl get-volume @DEFAULT_AUDIO_SINK@ | grep MUTED >/dev/null
 }
 
 function mic_is_mute {
-    wpctl get-volume @DEFAULT_AUDIO_SOURCE@ | grep MUTED > /dev/null
+	wpctl get-volume @DEFAULT_AUDIO_SOURCE@ | grep MUTED >/dev/null
 }
 
 function send_notification {
 	volume=$(get_volume)
-    # Make the bar with the special character ─ (it's not dash -)
-    # https://en.wikipedia.org/wiki/Box-drawing_character
-if [ "$volume" = "0" ]; then
-        icon_name="/usr/share/icons/Adwaita/16x16/legacy/audio-volume-muted.png"
-notify-send -i "$icon_name" -r 5556 -u normal "$volume"
-    else
-	if [  "$volume" -lt "10" ]; then
-	     icon_name="/usr/share/icons/Adwaita/16x16/legacy/audio-volume-low.png"
-notify-send -i "$icon_name" -r 5556 -u normal "$volume"
-    else
-        if [ "$volume" -lt "30" ]; then
-            icon_name="/usr/share/icons/Adwaita/16x16/legacy/audio-volume-low.png"
-        else
-            if [ "$volume" -lt "70" ]; then
-                icon_name="/usr/share/icons/Adwaita/16x16/legacy/audio-volume-medium.png"
-            else
-                icon_name="/usr/share/icons/Adwaita/16x16/legacy/audio-volume-high.png"
-            fi
-        fi
-    fi
-fi
-bar=$(seq -s "─" $(($volume/5)) | sed 's/[0-9]//g')
-# Send the notification
-notify-send -i "$icon_name" -r 5556 -u normal "$bar  $volume"
+	# Make the bar with the special character ─ (it's not dash -)
+	# https://en.wikipedia.org/wiki/Box-drawing_character
+	if [ "$volume" = "0" ]; then
+		icon_name="/usr/share/icons/Adwaita/16x16/legacy/audio-volume-muted.png"
+		notify-send -i "$icon_name" -r 5556 -u normal "$volume"
+	else
+		if [ "$volume" -lt "10" ]; then
+			icon_name="/usr/share/icons/Adwaita/16x16/legacy/audio-volume-low.png"
+			notify-send -i "$icon_name" -r 5556 -u normal "$volume"
+		else
+			if [ "$volume" -lt "30" ]; then
+				icon_name="/usr/share/icons/Adwaita/16x16/legacy/audio-volume-low.png"
+			else
+				if [ "$volume" -lt "70" ]; then
+					icon_name="/usr/share/icons/Adwaita/16x16/legacy/audio-volume-medium.png"
+				else
+					icon_name="/usr/share/icons/Adwaita/16x16/legacy/audio-volume-high.png"
+				fi
+			fi
+		fi
+	fi
+	bar=$(seq -s "─" $(($volume / 5)) | sed 's/[0-9]//g')
+	# Send the notification
+	notify-send -i "$icon_name" -r 5556 -u normal "$bar  $volume"
 }
 
 case $1 in
-    up)
+up)
 	# Up the volume (+ 2%)
-	wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 2%+ > /dev/null
+	wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 2%+ >/dev/null
 	send_notification
 	canberra-gtk-play -i audio-volume-change
 	;;
-    down)
-	wpctl set-volume @DEFAULT_AUDIO_SINK@ 2%- > /dev/null
+down)
+	wpctl set-volume @DEFAULT_AUDIO_SINK@ 2%- >/dev/null
 	send_notification
 	canberra-gtk-play -i audio-volume-change
 	;;
-    mute)
-    	# Toggle mute
-	wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle > /dev/null
-	if is_mute ; then
-	notify-send -i "/usr/share/icons/Adwaita/16x16/legacy/audio-volume-muted.png" -r 5556 -u normal "$bar Audio Muted"
+mute)
+	# Toggle mute
+	wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle >/dev/null
+	if is_mute; then
+		notify-send -i "/usr/share/icons/Adwaita/16x16/legacy/audio-volume-muted.png" -r 5556 -u normal "$bar Audio Muted"
 	else
-	    send_notification
-	    canberra-gtk-play -i audio-volume-change
+		send_notification
+		canberra-gtk-play -i audio-volume-change
 	fi
-	;; 
-    micmute)
-    	# Toggle mic mute
-	wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle > /dev/null
-	if mic_is_mute ; then
-	notify-send -i "/usr/share/icons/Adwaita/16x16/legacy/audio-volume-muted.png" -r 5556 -u normal "Microphone Muted"
+	;;
+micmute)
+	# Toggle mic mute
+	wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle >/dev/null
+	if mic_is_mute; then
+		notify-send -i "/usr/share/icons/Adwaita/16x16/legacy/audio-volume-muted.png" -r 5556 -u normal "Microphone Muted"
 	else
-	notify-send -i "/usr/share/icons/Adwaita/16x16/legacy/audio-volume-muted.png" -r 5556 -u normal "Microphone On"
+		notify-send -i "/usr/share/icons/Adwaita/16x16/legacy/audio-volume-muted.png" -r 5556 -u normal "Microphone On"
 	fi
-	;; 
-    *)
+	;;
+*)
 	volume="$(get_volume)"
 
 	if [[ $volume == "100" ]]; then
@@ -85,7 +85,7 @@ case $1 in
 		icon="󰕾"
 	elif [[ $volume -ge "79" && $volume -le "90" ]]; then
 		icon="󰕾"
-	elif [[ $volume -ge "0.69" && $volume -le "0.80" ]]; then
+	elif [[ $volume -ge "69" && $volume -le "80" ]]; then
 		icon="󰖀"
 	elif [[ $volume -ge "59" && $volume -le "70" ]]; then
 		icon="󰖀"
@@ -108,12 +108,11 @@ case $1 in
 		icon="󰕿"
 	fi
 
-
-if is_mute; then
+	if is_mute; then
 		icon="󰝟"
 		volume=""
-fi
+	fi
 
-printf "%s" "$icon$volume"
-  ;;
+	printf "%s" "$icon$volume"
+	;;
 esac
