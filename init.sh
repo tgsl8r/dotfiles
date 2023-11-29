@@ -17,6 +17,7 @@ makepkg -fsri
 progs=(
 	ttf-firacode-nerd
 	zsh
+  tmux
 	asdf-vm
 	btop
 	bat
@@ -39,6 +40,7 @@ progs=(
 	zathura
 	zathura-pdf-poppler
 	bitwarden-cli
+  stow
 )
 pikaur -Syu
 pikaur -S ${progs[@]}
