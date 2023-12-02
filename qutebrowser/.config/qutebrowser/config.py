@@ -10,6 +10,9 @@
 #   qute://help/configuring.html
 #   qute://help/settings.html
 
+# Import theme package
+import catppuccin
+
 # pylint: disable=C0111
 c = c  # noqa: F821 pylint: disable=E0602,C0103
 config = config  # noqa: F821 pylint: disable=E0602,C0103
@@ -142,4 +145,9 @@ config.bind('xx', 'config-cycle statusbar.show never always;; config-cycle tabs.
 c.qt.args += ['stylesheet=/home/toby/.config/qutebrowser/stylesheet.qss']
 
 c.content.autoplay = False
-config.source('style.py')
+
+config.set("colors.webpage.darkmode.enabled", True)
+
+catppuccin.setup(c, 'frappe', True)
+
+# config.source('style.py')
