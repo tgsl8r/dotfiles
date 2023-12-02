@@ -36,6 +36,7 @@ progs=(
 	clipman
 	qt6-wayland
 	qutebrowser
+  imv
 	mpv
 	zathura
 	zathura-pdf-poppler
