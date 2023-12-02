@@ -820,7 +820,7 @@ schemes:
 # *SolarizedDark
 # *TomorrowNight
 
-colors: *GruvboxDark
+colors: *Catppuccin-Frappe
 
 # Visual Bell
 #
