@@ -12,13 +12,19 @@ from groups import groups
 from libqtile.log_utils import logger
 
 
-# Startup
+# Boot
 @hook.subscribe.startup_once
-def autostart():
-    lazy.hide_show_bar(position="all")
-    lazy.core.hide_cursor()
+def bootup():
     home = os.path.expanduser("~")
     subprocess.Popen([home + "/.config/qtile/autostart.sh"])
+
+
+# After startup
+@hook.subscribe.startup_complete
+def autostart():
+    qtile.cmd_hide_show_bar(position="all")
+    lazy.core.hide_cursor()
+    lazy.spawn("alacritty")
 
 
 # Reload config on screen changes
