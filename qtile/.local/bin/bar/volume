@@ -18,7 +18,9 @@ function mic_is_mute {
 }
 
 function send_notification {
-	volume=$(get_volume)
+	decimal_volume=$(get_volume)
+	big_volume=$(bc -l <<<"${decimal_volume}*100")
+	volume=${big_volume%%.*}
 	# Make the bar with the special character ─ (it's not dash -)
 	# https://en.wikipedia.org/wiki/Box-drawing_character
 	if [ "$volume" = "0" ]; then
@@ -77,7 +79,9 @@ micmute)
 	fi
 	;;
 *)
-	volume="$(get_volume)"
+	decimal_volume=$(get_volume)
+	big_volume=$(bc -l <<<"${decimal_volume}*100")
+	volume=${big_volume%%.*}
 
 	if [[ $volume == "100" ]]; then
 		icon="󰕾"
@@ -113,6 +117,6 @@ micmute)
 		volume=""
 	fi
 
-	printf "%s" "$icon$volume"
+	printf "%s" "$icon $volume"
 	;;
 esac
