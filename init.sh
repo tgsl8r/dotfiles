@@ -33,6 +33,8 @@ progs=(
 	swaylock
 	brightnessctl
 	wl-clipboard
+  bluez
+  bluetuith
 	clipman
 	qt6-wayland
 	qutebrowser
