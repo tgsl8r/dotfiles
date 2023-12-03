@@ -10,7 +10,7 @@ from catppuccin import colors
 
 
 widget_defaults = dict(
-    font="FiraCode Nerd Font", fontsize="14", padding=2, foreground=colors["flamingo"]
+    font="FiraCode Nerd Font", fontsize="14", padding=2, foreground=colors["lavender"]
 )
 
 extension_defaults = widget_defaults.copy()
@@ -19,7 +19,7 @@ primary_widgets = [
     widget.Spacer(length=10),
     widget.GroupBox(
         padding=0,
-        active=colors["flamingo"],
+        active=colors["lavender"],
         borderwidth=3,
         inactive=colors["surface2"],
         this_current_screen_border=colors["mauve"],
@@ -58,6 +58,7 @@ primary_widgets = [
     widget.KeyboardLayout(configured_keyboards=["gb", "us"]),
     widget.Spacer(length=5),
     widget.GenPollText(
+        fmt="| {}",
         update_interval=1,
         **widget_defaults,
         func=lambda: subprocess.check_output(
@@ -74,6 +75,7 @@ primary_widgets = [
     ),
     widget.Spacer(length=5),
     widget.GenPollText(
+        fmt="| {}",
         update_interval=1,
         **widget_defaults,
         func=lambda: subprocess.check_output(
@@ -93,6 +95,7 @@ primary_widgets = [
     ),
     widget.Spacer(length=5),
     widget.GenPollText(
+        fmt="| {}",
         update_interval=1,
         **widget_defaults,
         func=lambda: subprocess.check_output(
@@ -107,6 +110,7 @@ primary_widgets = [
     ),
     widget.Spacer(length=5),
     widget.GenPollText(
+        fmt="| {}",
         update_interval=1,
         **widget_defaults,
         func=lambda: subprocess.check_output(
@@ -139,7 +143,7 @@ secondary_widgets = [
         padding=0,
         active=colors["rosewater"],
         borderwidth=3,
-        inactive=colors["flamingo"],
+        inactive=colors["lavender"],
         this_current_screen_border=colors["mauve"],
         this_screen_border=colors["mauve"],
         other_screen_border=colors["crust"],
