@@ -8,8 +8,8 @@ dbus-update-activation-environment --systemd \
 	WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=$XDG_CURRENT_DESKTOP
 
 # Authentication dialog
-pkill -f /usr/libexec/polkit-gnome-authentication-agent-1
-/usr/libexec/polkit-gnome-authentication-agent-1 &
+# pkill -f /usr/libexec/polkit-gnome-authentication-agent-1
+# /usr/libexec/polkit-gnome-authentication-agent-1 &
 
 # ssh-agent
 eval $(ssh-agent)
@@ -21,9 +21,9 @@ ssh-add ~/.ssh/toby-archpad
 # /usr/bin/pipewire-pulse &
 # /usr/bin/wireplumber
 
-# Start xdg-desktop-portal-wlr  
-pkill -f /usr/libexec/xdg-desktop-portal-wlr
-/usr/libexec/xdg-desktop-portal-wlr &
+# Start xdg-desktop-portal-wlr
+# pkill -f /usr/libexec/xdg-desktop-portal-wlr
+# /usr/libexec/xdg-desktop-portal-wlr &
 
 # Kanshi
 pkill -f kanshi
