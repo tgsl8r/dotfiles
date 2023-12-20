@@ -9,7 +9,7 @@ set -g @plugin 'tmux-plugins/tpm'
 set -g @plugin 'tmux-plugins/tmux-sensible'
 set -g @plugin 'tmux-plugins/tmux-pain-control'
 set -g @plugin 'tmux-plugins/tmux-sessionist'
-set -g @plugin 'egel/tmux-gruvbox'
+set -g @plugin 'niksingh710/minimal-tmux-status'
 
 # Other examples:
 # set -g @plugin 'github_username/plugin_name'
@@ -17,7 +17,7 @@ set -g @plugin 'egel/tmux-gruvbox'
 # set -g @plugin 'git@bitbucket.com:user/plugin'
 
 # Plugin settings
-set -g @tmux-gruvbox 'dark'
+set -g @minimal-tmux-bg "#698DDA"
 
 # Initialize TMUX plugin manager (keep this line at the very bottom of tmux.conf)
 run '~/.tmux/plugins/tpm/tpm'
