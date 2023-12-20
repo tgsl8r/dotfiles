@@ -1,5 +1,8 @@
-# Settings
+# Keybinds
+# Ctrl-a for prefix
 set-option -g prefix C-a
+# Toggle status bar swith prefix-b
+bind-key b set-option status
 
 # Plugins
 set -g @plugin 'tmux-plugins/tpm'
