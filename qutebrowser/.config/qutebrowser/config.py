@@ -22,7 +22,7 @@ config.load_autoconfig(False)
 c.auto_save.session = True
 
 # Format of timestamps (e.g. for the history completion).
-c.completion.timestamp_format = '%Y-%m-%d %H:%M'
+c.completion.timestamp_format = "%Y-%m-%d %H:%M"
 
 # Confirm quit if downloading
 c.confirm_quit = ["downloads"]
@@ -30,17 +30,19 @@ c.confirm_quit = ["downloads"]
 # Download locations
 c.downloads.location.directory = "~/Downloads"
 
-c.url.searchengines = {'DEFAULT': 'https://start.duckduckgo.com/?q={}',
-                       'aw': 'https://wiki.archlinux.org/?search={}',
-                       'gh': 'https://github.com/{unquoted}',
-                       'ghs': 'https://github.com/search?q={}',
-                       'r': 'https://www.reddit.com/r/{unquoted}',
-                       'rs': 'https://www.reddit.com/search?q={}',
-                       'wiki': 'https://en.wikipedia.org/wiki/{}',
-                       'gg': 'https://www.google.com/search?q={}',
-                       'yt': 'https://www.youtube.com/results?search_query={}'}
+c.url.searchengines = {
+    "DEFAULT": "https://start.duckduckgo.com/?q={}",
+    "aw": "https://wiki.archlinux.org/?search={}",
+    "gh": "https://github.com/{unquoted}",
+    "ghs": "https://github.com/search?q={}",
+    "r": "https://www.reddit.com/r/{unquoted}",
+    "rs": "https://www.reddit.com/search?q={}",
+    "wiki": "https://en.wikipedia.org/wiki/{}",
+    "gg": "https://www.google.com/search?q={}",
+    "yt": "https://www.youtube.com/results?search_query={}",
+}
 
-c.url.default_page = 'https://start.duckduckgo.com'
+c.url.default_page = "https://start.duckduckgo.com"
 
 # Which cookies to accept. With QtWebEngine, this setting also controls
 # other features with tracking capabilities similar to those of cookies;
@@ -64,10 +66,10 @@ c.url.default_page = 'https://start.duckduckgo.com'
 #   - no-3rdparty: Accept cookies from the same origin only. This is known to break some sites, such as GMail.
 #   - no-unknown-3rdparty: Accept cookies from the same origin only, unless a cookie is already set for the domain. On QtWebEngine, this is the same as no-3rdparty.
 #   - never: Don't accept cookies at all.
-c.content.cookies.accept = 'all'
+c.content.cookies.accept = "all"
 
 # Value to send in the Accept-Language header
-c.content.headers.accept_language = 'en-GB,en,el;q=0.9'
+c.content.headers.accept_language = "en-GB,en,el;q=0.9"
 
 # User agent to send.  The following placeholders are defined:  *
 # `{os_info}`: Something like "X11; Linux x86_64". * `{webkit_version}`:
@@ -84,7 +86,7 @@ c.content.headers.accept_language = 'en-GB,en,el;q=0.9'
 # JavaScript requires a restart.
 # Type: FormatString
 
-c.content.headers.user_agent = 'Mozilla/5.0 ({os_info}) QtWebEngine/{qt_version} qutebrowser/{qutebrowser_version} Chromium/{upstream_browser_version}'
+c.content.headers.user_agent = "Mozilla/5.0 ({os_info}) QtWebEngine/{qt_version} qutebrowser/{qutebrowser_version} Chromium/{upstream_browser_version}"
 
 # Set Chromium back to 67.0.1 in case of cloudflare issues
 # c.content.headers.user_agent = 'Mozilla/5.0 ({os_info}) QtWebEngine/{qt_version} qutebrowser/{qutebrowser_version} Chromium/67.0.1'
@@ -103,7 +105,7 @@ c.content.javascript.enabled = True
 #   - true
 #   - false
 #   - ask
-c.content.notifications.enabled = 'ask'
+c.content.notifications.enabled = "ask"
 
 # Allow websites to register protocol handlers via
 # `navigator.registerProtocolHandler`.
@@ -112,42 +114,52 @@ c.content.notifications.enabled = 'ask'
 #   - true
 #   - false
 #   - ask
-c.content.register_protocol_handler = 'ask'
+c.content.register_protocol_handler = "ask"
 
-c.editor.command = ['alacritty', '-e', 'nvim', '{file}', '-c', 'normal {line}G{column0}l']
+c.editor.command = [
+    "alacritty",
+    "-e",
+    "nvim",
+    "{file}",
+    "-c",
+    "normal {line}G{column0}l",
+]
 
-c.fileselect.multiple_files.command = ['alacritty', '-e', 'ranger', '--choosefiles={}']
+c.fileselect.multiple_files.command = ["alacritty", "-e", "ranger", "--choosefiles={}"]
 
-c.fileselect.folder.command = ['alacritty', '-e', 'ranger', '--choosedir={}']
+c.fileselect.folder.command = ["alacritty", "-e", "ranger", "--choosedir={}"]
 
-c.spellcheck.languages = ['en-GB']
+c.spellcheck.languages = ["en-GB"]
 
-c.tabs.padding = {'bottom': 4, 'left': 5, 'right': 5, 'top': 2}
+c.tabs.padding = {"bottom": 4, "left": 5, "right": 5, "top": 2}
 
-c.tabs.select_on_remove = 'prev'
+c.tabs.select_on_remove = "prev"
 
-c.fonts.default_family = 'FiraCode Nerd Font'
-c.fonts.default_size = '10pt'
-c.fonts.web.family.standard = 'FiraCode Nerd Font'
+c.fonts.default_family = "FiraCode Nerd Font"
+c.fonts.default_size = "10pt"
+c.fonts.web.family.standard = "FiraCode Nerd Font"
 c.fonts.web.size.default = 14
 
 # Font used for the context menu. If set to null, the Qt default is
 # used.
 # Type: Font
-c.fonts.contextmenu = 'default_size default_family'
+c.fonts.contextmenu = "default_size default_family"
 
-config.bind(',M', 'hint links spawn mpv {hint-url}')
-config.bind('xb', 'config-cycle statusbar.show never always')
-config.bind('xt', 'config-cycle tabs.show never always ')
-config.bind('xx', 'config-cycle statusbar.show never always;; config-cycle tabs.show never always ')
+config.bind(",M", "hint links spawn mpv {hint-url}")
+config.bind("xb", "config-cycle statusbar.show never always")
+config.bind("xt", "config-cycle tabs.show never always ")
+config.bind(
+    "xx",
+    "config-cycle statusbar.show never always;; config-cycle tabs.show never always ",
+)
 
 # Custom stylesheet
-c.qt.args += ['stylesheet=/home/toby/.config/qutebrowser/stylesheet.qss']
+c.qt.args += ["stylesheet=/home/toby/.config/qutebrowser/stylesheet.qss"]
 
 c.content.autoplay = False
 
-config.set("colors.webpage.darkmode.enabled", True)
+config.set("colors.webpage.darkmode.enabled", False)
 
-catppuccin.setup(c, 'frappe', True)
+catppuccin.setup(c, "latte", True)
 
 # config.source('style.py')
