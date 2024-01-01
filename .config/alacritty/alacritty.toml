@@ -1,0 +1,132 @@
+ipc_socket = true
+live_config_reload = true
+
+[bell]
+animation = "EaseOutExpo"
+duration = 0
+
+[colors]
+draw_bold_text_with_bright_colors = false
+
+[colors.bright]
+black = "#626262"
+blue = "#878787"
+cyan = "#87afaf"
+green = "#87875f"
+magenta = "#af8787"
+red = "#af5f5f"
+white = "#dfdfaf"
+yellow = "#af875f"
+
+[colors.cursor]
+cursor = "CellForeground"
+text = "CellBackground"
+
+[colors.hints.end]
+background = "#af875f"
+foreground = "#1c1c1c"
+
+[colors.hints.start]
+background = "#af875f"
+foreground = "#1c1c1c"
+
+[colors.line_indicator]
+background = "#af875f"
+foreground = "#1c1c1c"
+
+[colors.normal]
+black = "#262626"
+blue = "#878787"
+cyan = "#87afaf"
+green = "#87875f"
+magenta = "#af8787"
+red = "#af5f5f"
+white = "#dfdfaf"
+yellow = "#af875f"
+
+[colors.primary]
+background = "#1c1c1c"
+foreground = "#dfdfaf"
+
+[colors.vi_mode_cursor]
+cursor = "CellForeground"
+text = "CellBackground"
+
+[cursor]
+blink_interval = 500
+thickness = 0.15
+unfocused_hollow = true
+vi_mode_style = "None"
+
+[cursor.style]
+blinking = "Always"
+shape = "Block"
+
+[env]
+TERM = "alacritty"
+WINIT_X11_SCALE_FACTOR = "1"
+
+[font]
+builtin_box_drawing = false
+size = 12
+
+[font.bold]
+style = "Regular"
+
+[font.bold_italic]
+style = "Regular"
+
+[font.italic]
+style = "Regular"
+
+[font.normal]
+family = "monospace"
+style = "Regular"
+
+[hints]
+alphabet = "jfkdls;ahgurieowpq"
+
+[[hints.enabled]]
+command = "linkhandler"
+post_processing = true
+regex = "(ipfs:|ipns:|magnet:|mailto:|gemini:|gopher:|https:|http:|news:|file:|git:|ssh:|ftp:)[^\u0000-\u001F\u007F-<>\"\\s{-}\\^⟨⟩`]+"
+
+[hints.enabled.binding]
+key = "U"
+mods = "Control|Shift"
+
+[hints.enabled.mouse]
+enabled = true
+mods = "None"
+
+[[keyboard.bindings]]
+action = "CreateNewWindow"
+key = "N"
+mods = "Shift|Control"
+
+[[keyboard.bindings]]
+action = "ToggleViMode"
+key = "Escape"
+mode = "~Search"
+mods = "Alt"
+
+[[keyboard.bindings]]
+action = "ToggleViMode"
+key = "Escape"
+mode = "Vi|~Search"
+
+[scrolling]
+history = 10000
+multiplier = 3
+
+[selection]
+save_to_clipboard = true
+semantic_escape_chars = ",│`|:\"' ()[]{}<>\t"
+
+[window]
+dynamic_padding = true
+dynamic_title = true
+
+[window.padding]
+x = 24
+y = 24
