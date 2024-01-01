@@ -3,7 +3,7 @@ alias vim="nvim"
 alias cat="bat --paging=never"
 alias less="bat"
 
-alias shactivate="eval '$(ssh-agent -s)' && ssh-add ~/.ssh/toby-archpad"
+alias shactivate="eval '$(ssh-agent -s)' && ssh-add ~/.ssh/bbtop"
 
 # todo.sh
 alias t="todo.sh"
