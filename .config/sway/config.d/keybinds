@@ -40,7 +40,7 @@
     bindsym Mod4+Shift+Backspace exec power
 
     # Window selector
-    bindsym Mod4+w exec swindow.sh
+    bindsym Mod4+Shift+w exec swindow.sh
 
     # Access task warrior
     bindsym Mod4+Space exec task.sh

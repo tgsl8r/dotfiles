@@ -17,7 +17,7 @@
 #
     exec ~/.config/yambar/launch.sh
     exec startup.sh
-
+    exec autotiling
 #
 # Settings
 #
