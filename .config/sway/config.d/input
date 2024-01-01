@@ -1,0 +1,24 @@
+#
+# Input configuration
+#
+    # Get the names of inputs by running: swaymsg -t get_inputs
+    input type:touchpad {
+        events disabled
+    }
+
+    input type:keyboard {
+        xkb_layout gb,gb
+        # xkb_variant ,colemak
+        xkb_options caps:escape_shifted_capslock,altwin:prtsc_rwin,altwin:menu_win,compose:ins
+
+        repeat_delay 250
+        repeat_rate 60
+    }
+
+#
+# Seat configuration
+#
+    seat * {
+        hide_cursor when-typing enable
+        xcursor_theme pixelfun3-eclipse
+    }

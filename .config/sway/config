@@ -1,0 +1,41 @@
+#
+#   ██████  █     █░ ▄▄▄     ▓██   ██▓
+# ▒██    ▒ ▓█░ █ ░█░▒████▄    ▒██  ██▒
+# ░ ▓██▄   ▒█░ █ ░█ ▒██  ▀█▄   ▒██ ██░
+#   ▒   ██▒░█░ █ ░█ ░██▄▄▄▄██  ░ ▐██▓░
+# ▒██████▒▒░░██▒██▓  ▓█   ▓██▒ ░ ██▒▓░
+# ▒ ▒▓▒ ▒ ░░ ▓░▒ ▒   ▒▒   ▓▒█░  ██▒▒▒
+# ░ ░▒  ░ ░  ▒ ░ ░    ▒   ▒▒ ░▓██ ░▒░
+# ░  ░  ░    ░   ░    ░   ▒   ▒ ▒ ░░
+#       ░      ░          ░  ░░ ░
+#                             ░ ░
+#
+# Read `man 5 sway` for a complete reference.
+
+#
+# Startup programs
+#
+    exec ~/.config/yambar/launch.sh
+    exec startup.sh
+
+#
+# Settings
+#
+    xwayland enable
+    default_orientation auto
+    gaps inner 28
+    gaps outer -8
+    default_border pixel 2
+    default_floating_border pixel 2
+    hide_edge_borders --i3 smart
+    workspace_auto_back_and_forth yes
+    title_align center
+    titlebar_padding 16 16
+    titlebar_border_thickness 0
+    mouse_warping container
+    focus_follows_mouse no
+    focus_wrapping no
+    swaynag_command -
+
+# Include config directory
+include $HOME/.config/sway/config.d/*

@@ -1,0 +1,17 @@
+#
+# Output configuration
+#
+    output * bg ~/wallpapers/noise_tile.png tile #592720
+
+#
+# Colours
+#
+    border_images.focused ~/.config/sway/borders/double_focused.png
+    border_images.focused_inactive ~/.config/sway/borders/double_unfocused_inactive.png
+    border_images.unfocused ~/.config/sway/borders/double_unfocused.png
+    border_images.urgent ~/.config/sway/borders/double_urgent.png
+
+    client.focused #af875f #1c1c1c #dfdfaf #af875f #af875f
+    client.focused_inactive #424242 #1c1c1c #dfdfaf #424242 #424242
+    client.unfocused #424242 #424242 #dfdfaf #424242 #424242
+    client.urgent #af5f5f #af5f5f #1c1c1c #af5f5f #af5f5f
