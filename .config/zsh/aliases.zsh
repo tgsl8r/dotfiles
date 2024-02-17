@@ -5,10 +5,10 @@
 
 
 ## User
-alias shactivate="eval '$(ssh-agent -s)' && ssh-add ~/.ssh/archpad"
+alias shactivate="eval '$(ssh-agent -s)' && ssh-add ~/.ssh/tobytab"
 
 # Dotfiles
-alias dotfiles='/usr/bin/git --git-dir=$HOME/.dtf/ --work-tree=$HOME'
+alias dot='/usr/bin/git --git-dir=$HOME/.dots/ --work-tree=$HOME'
 
 # Dir stack
 alias d='dirs -v'
