@@ -1,4 +1,0 @@
-
-profile Laptop {
-	output eDP-1 position 0,0 mode 1920x1080
-}
