@@ -1,23 +1,45 @@
-# Keybinds
+
+#░▀█▀░█▄█░█░█░█░█░█▀▄░█▀▀░
+#░░█░░█░█░█░█░▄▀▄░█▀▄░█░░░
+#░░▀░░▀░▀░▀▀▀░▀░▀░▀░▀░▀▀▀░
+
+# https://github.com/jabirali/tmux-tilish
+# https://github.com/tmux-plugins/tmux-sessionist
+
+## Keybinds
 # Ctrl-a for prefix
 set-option -g prefix C-a
+# Vim keys in copy-mode
+set -g mode-keys vi
+bind-key -T copy-mode-vi 'v' send -X begin-selection
+bind-key -T copy-mode-vi 'y' send -X cope-selection-and-cancel
 # Toggle status bar swith prefix-b
 bind-key b set-option status
 
+
+## Options
+# Windows are 1-indexed
+set -g base-index 1
+
+
+## TPM
 # Plugins
 set -g @plugin 'tmux-plugins/tpm'
 set -g @plugin 'tmux-plugins/tmux-sensible'
-set -g @plugin 'tmux-plugins/tmux-pain-control'
 set -g @plugin 'tmux-plugins/tmux-sessionist'
+set -g @plugin 'jabirali/tmux-tilish'
+set -g @plugin 'sunaku/tmux-navigate'
 set -g @plugin 'niksingh710/minimal-tmux-status'
 
-# Other examples:
-# set -g @plugin 'github_username/plugin_name'
-# set -g @plugin 'github_username/plugin_name#branch'
-# set -g @plugin 'git@bitbucket.com:user/plugin'
-
 # Plugin settings
+set -g @tilish-navigate 'on'
+set -g @tilish-dmenu 'on'
+set -g @tilish-shiftnum '!@£$%^&*()'
 set -g @minimal-tmux-bg "#698DDA"
+
+# Install `tpm` if needed.
+if "test ! -d ~/.tmux/plugins/tpm" \
+   "run 'git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm && ~/.tmux/plugins/tpm/bin/install_plugins'"
 
 # Initialize TMUX plugin manager (keep this line at the very bottom of tmux.conf)
 run '~/.tmux/plugins/tpm/tpm'
