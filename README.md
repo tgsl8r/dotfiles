@@ -15,6 +15,12 @@ curl -LJO https://raw.githubusercontent.com/tgsl8r/dotfiles/bare/init.sh | /bin/
 
 ## Manual Installation
 
+* Install requirements
+```sh
+sudo pacman -Syu
+sudo pacman -S zsh tmux
+```
+
 * Clone into bare repo
 ```sh 
 git clone --bare <git-repo-url> $HOME/.dots
@@ -33,4 +39,9 @@ dot checkout
 * Hide untracked files
 ```sh
 dot config --local status.showUntrackedFiles no
+```
+
+* Change shell to zsh if necessary (then relog)
+```sh
+chsh -s $(which zsh)
 ```
