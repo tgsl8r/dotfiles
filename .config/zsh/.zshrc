@@ -12,7 +12,7 @@ source "${ZDOTDIR}/prompt.zsh"
 
 ## APPS
 # asdf
-. "$HOME/.asdf/asdf.sh"
+. "$HOME/.local/bin/asdf/asdf.sh"
 
 
 # Shell options
