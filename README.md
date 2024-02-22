@@ -7,6 +7,12 @@
 * Qtile
 * ... et al
 
+
+## Lazy Installation
+```sh
+curl -LJO https://raw.githubusercontent.com/tgsl8r/dotfiles/bare/init.sh | /bin/bash
+```
+
 ## Manual Installation
 
 * Clone into bare repo
