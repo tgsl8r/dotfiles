@@ -6,6 +6,9 @@
 
 export ZDOTDIR=~/.config/zsh
 
+# Apps
+export ASDF_DIR=~/.local/bin/asdf
+
 # XDG
 export XDG_CONFIG_HOME=~/.config
 export XDG_CACHE_HOME=~/.cache
