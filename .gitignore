@@ -14,3 +14,4 @@ __pycache__/
 # Zsh stuff
 .zcompdump
 .zsh_history
+.history

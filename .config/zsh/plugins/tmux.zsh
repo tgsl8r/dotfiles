@@ -5,12 +5,12 @@ fi
 
 # CONFIGURATION VARIABLES
 # Automatically start tmux
-: ${ZSH_TMUX_AUTOSTART:=false}
+: ${ZSH_TMUX_AUTOSTART:=true}
 # Only autostart once. If set to false, tmux will attempt to
 # autostart every time your zsh configs are reloaded.
-: ${ZSH_TMUX_AUTOSTART_ONCE:=true}
+: ${ZSH_TMUX_AUTOSTART_ONCE:=false}
 # Automatically connect to a previous session if it exists
-: ${ZSH_TMUX_AUTOCONNECT:=true}
+: ${ZSH_TMUX_AUTOCONNECT:=false}
 # Automatically close the terminal when tmux exits
 : ${ZSH_TMUX_AUTOQUIT:=$ZSH_TMUX_AUTOSTART}
 # Set term to screen or screen-256color based on current terminal support
@@ -34,7 +34,7 @@ else
   : ${ZSH_TMUX_CONFIG:=$HOME/.tmux.conf}
 fi
 # Set -u option to support unicode
-: ${ZSH_TMUX_UNICODE:=false}
+: ${ZSH_TMUX_UNICODE:=true}
 
 # ALIASES
 alias ta='tmux attach -t'
