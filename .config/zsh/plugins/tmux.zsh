@@ -10,11 +10,11 @@ fi
 # autostart every time your zsh configs are reloaded.
 : ${ZSH_TMUX_AUTOSTART_ONCE:=false}
 # Automatically connect to a previous session if it exists
-: ${ZSH_TMUX_AUTOCONNECT:=false}
+: ${ZSH_TMUX_AUTOCONNECT:=true}
 # Automatically close the terminal when tmux exits
 : ${ZSH_TMUX_AUTOQUIT:=$ZSH_TMUX_AUTOSTART}
 # Set term to screen or screen-256color based on current terminal support
-: ${ZSH_TMUX_FIXTERM:=true}
+: ${ZSH_TMUX_FIXTERM:=false}
 # Set '-CC' option for iTerm2 tmux integration
 : ${ZSH_TMUX_ITERM2:=false}
 # The TERM to use for non-256 color terminals.
@@ -30,6 +30,8 @@ if [[ -e $HOME/.tmux.conf ]]; then
   : ${ZSH_TMUX_CONFIG:=$HOME/.tmux.conf}
 elif [[ -e ${XDG_CONFIG_HOME:-$HOME/.config}/tmux/tmux.conf ]]; then
   : ${ZSH_TMUX_CONFIG:=${XDG_CONFIG_HOME:-$HOME/.config}/tmux/tmux.conf}
+elif [[ -e ${XDG_CONFIG_HOME:-$HOME/.config}/tmux/tmuxrc ]]; then
+  : ${ZSH_TMUX_CONFIG:=${XDG_CONFIG_HOME:-$HOME/.config}/tmux/tmuxrc}
 else
   : ${ZSH_TMUX_CONFIG:=$HOME/.tmux.conf}
 fi
