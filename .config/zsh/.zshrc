@@ -6,6 +6,7 @@
 
 ## Config files
 source "${ZDOTDIR}/aliases.zsh"
+source "${ZDOTDIR}/scripts.zsh"
 source "${ZDOTDIR}/completion.zsh"
 source "${ZDOTDIR}/prompt.zsh"
 
