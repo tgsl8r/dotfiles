@@ -1,3 +1,22 @@
+
+# ░█▀▀░█▀▀░█▀▄░▀█▀░█▀█░▀█▀░█▀▀░
+# ░▀▀█░█░░░█▀▄░░█░░█▀▀░░█░░▀▀█░
+# ░▀▀▀░▀▀▀░▀░▀░▀▀▀░▀░░░░▀░░▀▀▀░
+
+
+# man - Colourized man pages
+man() {
+    env \
+        LESS_TERMCAP_mb=$(printf "\e[1;31m") \
+        LESS_TERMCAP_md=$(printf "\e[1;31m") \
+        LESS_TERMCAP_me=$(printf "\e[0m") \
+        LESS_TERMCAP_se=$(printf "\e[0m") \
+        LESS_TERMCAP_so=$(printf "\e[1;40;35m") \
+        LESS_TERMCAP_ue=$(printf "\e[0m") \
+        LESS_TERMCAP_us=$(printf "\e[1;33m") \
+        man "$@"
+}
+
 # trun - Run a program from the terminal and disown process
 trun() {
     "$@" &> /dev/null & disown
@@ -23,6 +42,11 @@ pass() {
 # cheat - Get a cheat sheet
 cheat() {
     curl cheat.sh/$1
+}
+
+# cht - TODO: Is this better than above?
+cht() {
+    curl -s "cheat.sh/$(echo -n "$*" | jq -sRr @uri)"
 }
 
 # ddg - Lookup with duckduckgo in lynx
@@ -213,7 +237,7 @@ fepub() {
 }
 
 
-## Package browsing (TODO: Pick favourites)
+## Package browsing (TODO: Pick these or aliases)
 # fpac - Browse and install packages with fzf
 fpac() {
     pacman -Slq | fzf --multi --reverse --preview 'pacman -Si {1}' | xargs -ro sudo pacman -S
