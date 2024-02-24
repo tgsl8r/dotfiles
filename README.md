@@ -19,6 +19,7 @@ curl -LJO https://raw.githubusercontent.com/tgsl8r/dotfiles/bare/init.sh | /bin/
 ```sh
 sudo pacman -Syu
 sudo pacman -S zsh tmux fzf fd eza bat lynx netstat unzip \ 
+               wlroots pywlroots pywayland python-xkbcommon qtile \
                ttf-firacode-nerd  qt6-wayland wl-clipboard \
                alacritty qutebrowser zathura imv mpd
 ```
