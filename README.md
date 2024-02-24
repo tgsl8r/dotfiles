@@ -18,7 +18,7 @@ curl -LJO https://raw.githubusercontent.com/tgsl8r/dotfiles/bare/init.sh | /bin/
 * Install requirements
 ```sh
 sudo pacman -Syu
-sudo pacman -S zsh tmux fzf eza bat lynx netstat unzip zathura
+sudo pacman -S zsh tmux fzf fd eza bat lynx netstat unzip zathura
 ```
 
 * Clone into bare repo
