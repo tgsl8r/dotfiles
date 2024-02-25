@@ -133,6 +133,7 @@ keys = [
         desc="Paste from clipman",
     ),
     Key([mod], "m", lazy.core.hide_cursor(), desc="Hide mouse cursor"),
+    Key([mod, "shift"], "m", lazy.core.unhide_cursor(), desc="Hide mouse cursor"),
     # Fuzzel
     Key([mod], "space", lazy.spawn("fuzzel"), desc="Launch Fuzzel menu"),
     # Window Switcher

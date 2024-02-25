@@ -15,8 +15,9 @@ from libqtile.backend.wayland import InputConfig
 
 wl_input_rules = {
     "type:keyboard": InputConfig(
-        kb_layout="gb", 
-        kb_options="caps:escape_shifted_capslock,altwin:prtsc_rwin,compose:ins"
+#       kb_layout="gb", 
+        kb_layout="us", 
+#       kb_options="caps:escape_shifted_capslock,altwin:prtsc_rwin,compose:ins"
         )
 }
 
