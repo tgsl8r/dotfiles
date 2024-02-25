@@ -17,6 +17,7 @@ spec("user.plugins.treesitter")
 spec("user.plugins.mason")
 spec("user.plugins.lspconfig")
 spec("user.plugins.cmp")
+spec("user.plugins.none-ls")
 spec("user.plugins.whichkey")
 -- Lazy --
 require("user.core.lazy")
