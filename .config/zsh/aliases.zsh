@@ -18,7 +18,8 @@ for index ({1..9}) alias "$index"="cd +${index}"; unset index
 alias l="eza -lah"
 alias cat="bat --paging=never"
 alias less="bat"
-alias vim="nvim"
+alias v="nvim"
+alias vz="NVIM_APPNAME=nvim-lazyvim nvim"
 
 # todo.sh
 alias t="todo.sh"
