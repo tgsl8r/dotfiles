@@ -17,6 +17,8 @@ source "${ZDOTDIR}/prompt.zsh"
 # fzf
 source "/usr/share/fzf/completion.zsh"
 source "/usr/share/fzf/key-bindings.zsh"
+# git
+source "${ZDOTDIR}/plugins/git.zsh"
 # tmux
 source "${ZDOTDIR}/plugins/tmux.zsh"
 
