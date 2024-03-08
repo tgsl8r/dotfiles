@@ -33,6 +33,6 @@ setopt PUSHD_SILENT         # Do not print the directory stack after pushd or po
 
 
 ## Completion system
-zstyle :compinstall filename '/home/toby/.zshrc'
+zstyle :compinstall filename "${ZDOTDIR}/.zshrc"
 autoload -Uz compinit
 compinit
