@@ -11,12 +11,17 @@ source "${ZDOTDIR}/completion.zsh"
 source "${ZDOTDIR}/prompt.zsh"
 
 
+# Mac/linux specific settings
+if [[ $(uname) == "Darwin" ]]; then
+    source "${ZDOTDIR}/os/mac.zsh"
+else
+    source "${ZDOTDIR}/os/linux.zsh"
+fi
+
+
 ## Apps
 # asdf
 . "$HOME/.local/bin/asdf/asdf.sh"
-# fzf
-source "/usr/share/fzf/completion.zsh"
-source "/usr/share/fzf/key-bindings.zsh"
 # git
 source "${ZDOTDIR}/plugins/git.zsh"
 # tmux
