@@ -18,6 +18,7 @@ spec("user.plugins.mason")
 spec("user.plugins.lspconfig")
 spec("user.plugins.cmp")
 spec("user.plugins.none-ls")
+spec("user.plugins.telescope")
 spec("user.plugins.whichkey")
 -- Lazy --
 require("user.core.lazy")
