@@ -15,7 +15,9 @@ alias d='dirs -v'
 for index ({1..9}) alias "$index"="cd +${index}"; unset index
 
 ## Applications
-alias l="eza -lah"
+alias l="eza -lah --icons"
+alias lt="eza -laTh --icons"
+alias lg="eza -lah --git --git-repos-no-status --icons"
 alias cat="bat --paging=never"
 alias less="bat"
 alias v="nvim"
