@@ -10,9 +10,10 @@ fi
 # autostart every time your zsh configs are reloaded.
 : ${ZSH_TMUX_AUTOSTART_ONCE:=false}
 # Automatically connect to a previous session if it exists
-: ${ZSH_TMUX_AUTOCONNECT:=false}
+: ${ZSH_TMUX_AUTOCONNECT:=true}
 # Automatically close the terminal when tmux exits
-: ${ZSH_TMUX_AUTOQUIT:=$ZSH_TMUX_AUTOSTART}
+# : ${ZSH_TMUX_AUTOQUIT:=$ZSH_TMUX_AUTOSTART}
+: ${ZSH_TMUX_AUTOQUIT:=false}
 # Set term to screen or screen-256color based on current terminal support
 : ${ZSH_TMUX_FIXTERM:=false}
 # Set '-CC' option for iTerm2 tmux integration
