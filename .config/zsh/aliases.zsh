@@ -25,7 +25,7 @@ alias lg="eza -lah --git --git-repos-no-status --icons"
 alias cat="bat --paging=never"
 alias less="bat"
 alias v="nvim"
-alias vz="NVIM_APPNAME=nvim-lazyvim nvim"
+alias vz="NVIM_APPNAME=nvim-lazy nvim"
 
 # todo.sh
 alias t="todo.sh"
