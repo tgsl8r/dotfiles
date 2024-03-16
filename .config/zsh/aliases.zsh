@@ -16,7 +16,7 @@ alias wp="cd ~/docs/code/AIVR && cd \$(fd --type d --max-depth 1 | fzf) && tds"
 
 # Dir stack
 alias d='dirs -v'
-for index ({1..9}) alias "$index"="cd +${index}"; unset index
+for index ({0..9}) alias "$index"="cd +${index}"; unset index
 
 ## Applications
 alias l="eza -lah --icons"
