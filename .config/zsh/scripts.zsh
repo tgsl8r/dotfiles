@@ -25,7 +25,8 @@ trun() {
 # mkcd - Create directory and go there
 mkcd() {
     local dir="$*";
-    local mkdir -p "$dir" && cd "$dir";
+    mkdir -p "$dir";
+    cd "$dir";
 }
 
 # bcal - Echo math to bc
