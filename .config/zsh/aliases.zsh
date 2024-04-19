@@ -16,7 +16,7 @@ alias wp="cd ~/docs/code/AIVR && cd \$(fd --type d --max-depth 1 | fzf) && tds"
 
 # Dir stack
 alias d='dirs -v'
-for index ({1..9}) alias "$index"="cd +${index}"; unset index
+for index ({0..9}) alias "$index"="cd +${index}"; unset index
 
 ## Applications
 alias l="eza -lah --icons"
@@ -25,7 +25,7 @@ alias lg="eza -lah --git --git-repos-no-status --icons"
 alias cat="bat --paging=never"
 alias less="bat"
 alias v="nvim"
-alias vz="NVIM_APPNAME=nvim-lazyvim nvim"
+alias vz="NVIM_APPNAME=nvim-lazy nvim"
 
 # todo.sh
 alias t="todo.sh"
