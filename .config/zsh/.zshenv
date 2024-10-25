@@ -8,7 +8,7 @@ export ZDOTDIR=~/.config/zsh
 
 # Apps
 export ASDF_DIR=~/.local/bin/asdf
-export FZF_DEFAULT_OPTS="--preview 'bat --color=always {}'"
+export FZF_DEFAULT_OPTS=""
 export FZF_DEFAULT_COMMAND="fd --type f"
 
 # XDG

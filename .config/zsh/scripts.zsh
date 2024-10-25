@@ -165,7 +165,7 @@ umnt() {
 
 # ports - View open ports with fzf
 ports() {
-    sudo netstat -tulpn | grep LISTEN | fzf;
+    sudo netstat -tulp | grep LISTEN | fzf;
 }
 
 # fdr - Browse the zsh dir stack with fzf
