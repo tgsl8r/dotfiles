@@ -1,0 +1,9 @@
+[X-GNOME-Metatheme]
+Name=Bolt-GTK
+Type=X-GNOME-Metatheme
+Comment=A Bolt-GTK looking theme
+Encoding=UTF-8
+GtkTheme=Bolt-GTK
+MetacityTheme=Bolt-GTK
+IconTheme=gnome
+ButtonLayout=menu:minimize,maximize,close
