@@ -1,0 +1,10 @@
+#! /bin/sh
+
+waylock \
+  -ignore-empty-password \
+  -init-color 0x1d2021 \
+  -input-color 0x5a524c \
+  # -input-alt-color 0x1d2021 \
+  -fail-color 0xea6962 \
+  > /dev/null 2>&1
+
