@@ -25,13 +25,12 @@ curl -LJO https://raw.githubusercontent.com/tgsl8r/dotfiles/bare/init.sh | /bin/
 
 ## Manual Installation
 
-* Install requirements
+* Install requirements (example list of dependencies for river with foot)
 ```sh
 sudo pacman -Syu
-sudo pacman -S zsh less tmux fzf fd ripgrep eza bat lynx net-tools unzip \ 
-               wlroots pywlroots python-pywayland python-xkbcommon qtile \
-               ttf-firacode-nerd qt6-wayland wl-clipboard \
-               alacritty qutebrowser zathura imv mpd
+sudo pacman -S zsh less tmux fzf fd ripgrep eza bat lynx net-tools unzip \
+               wlroots river qt6-wayland foot qutebrowser zathura imv mpd \
+               ttf-firacode-nerd  wl-clipboard
 ```
 
 * Clone into bare repo
