@@ -14,7 +14,7 @@ riverctl map normal Super Q close
 riverctl map normal Super Return spawn foot
 
 # Super+Shift+T to start an instance of tmux in foot
-riverctl map normal Super T spawn tmux
+riverctl map normal Super T spawn "foot tmux"
 
 # Super+Shift+W to start an instance of alternative browser; firefox
 riverctl map normal Super+Shift W spawn firefox
