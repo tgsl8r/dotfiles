@@ -46,7 +46,11 @@ plugins=(
   )
 VI_MODE_SET_CURSOR=true
 
+# ZLE options
+zle -N edit-command-line
+
 # keybinds
+bindkey -M vicmd v edit-command-line
 bindkey -v '^?' backward-delete-char
 bindkey -M viins "^A" beginning-of-line
 bindkey -M vicmd "^A" beginning-of-line
