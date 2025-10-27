@@ -1,0 +1,17 @@
+#!/bin/sh
+
+askSystem() {
+	choice=$(
+		printf "Lock\nLogout\nReboot\nShutdown\nSuspend" | fuzzel -l 5 -w 10 -di -p "󱩛 "
+	)
+
+	case $choice in
+	Lock) lock ;;
+	Logout) loginctl kill-user $USER ;;
+	Reboot) loginctl reboot ;;
+	Shutdown) loginctl poweroff ;;
+	Suspend) loginctl suspend ;;
+	esac
+}
+
+([ "$1" = "lock" ] && lock) || askSystem
