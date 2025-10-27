@@ -4,8 +4,18 @@
 * Zsh
 * Tmux
 * Neovim
-* Qtile
-* ... et al
+
+main contains every config, multiple window managers, file browsers, etc are represented, e.g:
+
+ * qtile
+ * river 
+ * amethyst (macOS)
+
+ * alacritty
+ * foot
+
+ * lf
+ * yazi
 
 
 ## Lazy Installation
