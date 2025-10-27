@@ -21,17 +21,17 @@ fi
 
 ## Apps
 # asdf
-. "$HOME/.local/bin/asdf/asdf.sh"
+[[ -d $HOME/.local/bin/asdf/ ]] && source "$HOME/.local/bin/asdf/asdf.sh"
 # git
 source "${ZDOTDIR}/plugins/git.zsh"
 # tmux
 source "${ZDOTDIR}/plugins/tmux.zsh"
 # cargo
-. "$HOME/.cargo/env"
+[[ -d $HOME/.cargo/env ]] && source "$HOME/.cargo/env"
 # pyenv
 export PYENV_ROOT="$HOME/.pyenv"
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
+[[ -d $PYENV_ROOT/bin ]] && eval "$(pyenv init -)"
 
 
 ## Shell options
