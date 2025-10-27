@@ -57,3 +57,5 @@ dot config --local status.showUntrackedFiles no
 ```sh
 chsh -s $(which zsh)
 ```
+
+* Build neovim from source
