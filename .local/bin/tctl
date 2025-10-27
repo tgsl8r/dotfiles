@@ -1,0 +1,71 @@
+#!/bin/bash
+
+# Default step values
+AUDIO_STEP=2
+BRIGHTNESS_STEP=5
+KB_BRIGHTNESS_STEP=1
+
+function get_volume {
+	wpctl get-volume @DEFAULT_AUDIO_SINK@ | cut -d " " -f 2
+}
+
+function is_mute {
+	wpctl get-volume @DEFAULT_AUDIO_SINK@ | grep MUTED >/dev/null
+}
+
+function mic_is_mute {
+	wpctl get-volume @DEFAULT_AUDIO_SOURCE@ | grep MUTED >/dev/null
+}
+
+case "$1" in
+    audio)
+        case "$2" in
+            up)
+		if is_mute; then
+			wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
+		fi
+                wpctl set-volume @DEFAULT_AUDIO_SINK@ ${AUDIO_STEP}%+
+                ;;
+            down)
+		if is_mute; then
+			wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
+		fi
+                wpctl set-volume @DEFAULT_AUDIO_SINK@ ${AUDIO_STEP}%-
+                ;;
+            mute)
+                wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
+                ;;
+            micmute)
+                wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle
+                ;;
+            *)
+                echo "Invalid subcommand. Use: up, down, mute, micmute"
+                exit 1
+                ;;
+        esac
+        ;;
+    brightness)
+        case "$2" in
+            up)
+                brightnessctl set ${BRIGHTNESS_STEP}%+
+                ;;
+            down)
+                brightnessctl set ${BRIGHTNESS_STEP}%-
+                ;;
+            keyup)
+                brightnessctl -d "*kbd_backlight" set ${KB_BRIGHTNESS_STEP}%+
+                ;;
+            keydown)
+                brightnessctl -d "*kbd_backlight" set ${KB_BRIGHTNESS_STEP}%-
+                ;;
+            *)
+                echo "Invalid command. Use: up, down, keyup, keydown"
+                exit 1
+                ;;
+        esac
+        ;;
+    *)
+        echo "Invalid command. Use: audio or brightness"
+        exit 1
+        ;;
+esac
