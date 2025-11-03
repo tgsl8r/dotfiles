@@ -26,6 +26,8 @@ alias cat="bat --paging=never"
 alias less="bat"
 alias v="/usr/local/bin/nvim"
 alias vz="NVIM_APPNAME=nvim-lazy /usr/bin/nvim"
+alias vm="/opt/homebrew/bin/nvim"
+alias vzm="NVIM_APPNAME=nvim-lazy /opt/homebrew/bin/nvim"
 
 # todo.sh
 alias t="todo.sh"
