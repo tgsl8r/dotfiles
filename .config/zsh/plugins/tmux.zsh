@@ -126,6 +126,31 @@ function _tmux_directory_session() {
 
 alias tds=_tmux_directory_session
 
+function tmx {
+    [ -n "$ZLE_STATE" ] && trap 'zle reset-prompt' EXIT
+    local tmux item
+    tmux="$(which tmux)" || return $?
+    if [ -z "$1" ] ; then
+        item="$($tmux list-sessions -F '#{session_name}' |\
+            fzf --header jump-to-session --preview "$tmux capture-pane -pt {}")" || return 2
+    else
+        item="$1"
+    fi
+    (
+        # Restore the standard std* file descriptors for tmux.
+        # https://unix.stackexchange.com/a/512979/22339
+        exec </dev/tty; exec <&1;
+        if [ -z "$TMUX" ] ; then
+            # Running insided tmux.
+            $tmux new-session -As "$item"
+        else
+            # Attempt to create a new session in case there none with that name.
+            $tmux new-session -ds "$item" 2>/dev/null || true
+            $tmux switch-client -t "$item"
+        fi
+    )
+}
+
 # Autostart if not already in tmux and enabled.
 if [[ -z "$TMUX" && "$ZSH_TMUX_AUTOSTART" == "true" && -z "$INSIDE_EMACS" && -z "$EMACS" && -z "$VIM" && -z "$INTELLIJ_ENVIRONMENT_READER" ]]; then
   # Actually don't autostart if we already did and multiple autostarts are disabled.
