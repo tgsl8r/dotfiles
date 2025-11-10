@@ -5,7 +5,7 @@ import = ["~/.config/alacritty/gruvbox-flat.toml"]
 size = 11
 
 [font.normal]
-family = "FiraCode Nerd Font Mono"
+family = "AtkinsonHyperlegibleMono Nerd Font"
 
 [hints]
 alphabet = "jfkdls;ahgurieowpq"
