@@ -19,9 +19,10 @@
     //"backlight",
     "network",
     "pulseaudio",
-    //"temperature",
+    "temperature",
     //"custom/clipboard",
-    //"memory",
+    "cpu",
+    "memory",
     "battery"
     //"tray"
     //"custom/power"
@@ -186,7 +187,7 @@
       "warning": 30,
       "critical": 15
     },
-    "format": "{icon}{capacity: >3}%",
+    "format": "{icon} {capacity: >3}%",
     // "format-good": "", // An empty format will hide the module
     // "format-full": "",
     "format-icons": ["", "", "", "", ""]
@@ -194,18 +195,18 @@
   },
   "network": {
     // "interface": "wlp2s0", // (Optional) To force the use of this interface
-    "format": "⚠ Disabled",
-    "format-wifi": " {essid}",
+    "format": "⚠  Disabled",
+    "format-wifi": "  {essid}",
     // "format-ethernet": " {ifname}: {ipaddr}/{cidr}",
-    "format-ethernet": " Wired",
+    "format-ethernet": "  Wired",
     "format-disconnected": "⚠ Disconnected",
     // "on-click": "foot -e nmtui"
     "on-click": "nm-connection-editor"
   },
   "pulseaudio": {
     "scroll-step": 1,
-    "format": "{icon}{volume: >3}%",
-    "format-bluetooth": "{icon}{volume: >3}%",
+    "format": "{icon} {volume: >3}%",
+    "format-bluetooth": "{icon} {volume: >3}%",
     "format-muted": " muted",
     "format-icons": {
       "headphones": "",
