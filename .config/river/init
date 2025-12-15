@@ -118,7 +118,7 @@ riverctl map normal Super+Shift Comma send-to-output previous
 # not have a modifier
 for mode in normal locked; do
 
-  riverctl map $mode None XF86AudioRaiseVolume spawn 'tctl adio up'
+  riverctl map $mode None XF86AudioRaiseVolume spawn 'tctl audio up'
   riverctl map $mode None XF86AudioLowerVolume spawn 'tctl audio down'
   riverctl map $mode None XF86AudioMute spawn 'tctl audio mute'
   riverctl map $mode None XF86AudioMicMute spawn 'tctl audio micmute'
