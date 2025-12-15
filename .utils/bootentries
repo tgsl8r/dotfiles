@@ -1,0 +1,6 @@
+#! /bin/bash
+
+efibootmgr --create --disk /dev/nvme0n1 --part 1 --label "Arch LTS" --loader /vmlinuz-linux-lts --unicode 'root=UUID=ba316996-d98b-491d-8f9b-45b725fd9a20 rw initrd=/initramfs-linux-lts.img resume=UUID=ba316996-d98b-491d-8f9b-45b725fd9a20 resume_offset=3796992 quiet loglevel=0 audit=0'
+
+efibootmgr --create --disk /dev/nvme0n1 --part 1 --label "Arch" --loader /vmlinuz-linux --unicode 'root=UUID=ba316996-d98b-491d-8f9b-45b725fd9a20 rw initrd=/initramfs-linux.img resume=UUID=ba316996-d98b-491d-8f9b-45b725fd9a20 resume_offset=3796992 quiet loglevel=0 audit=0'
+
