@@ -176,3 +176,4 @@ rivertile -view-padding 6 -outer-padding 6 &
 
 riverctl spawn swayidle
 riverctl spawn waybar
+riverctl spawn "wl-copy --watch cliphist store"
