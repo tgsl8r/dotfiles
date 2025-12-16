@@ -3,6 +3,16 @@
 # Super+Shift+Escape to exit river
 riverctl map normal Super+Shift Escape exit
 
+### MENUS ###
+
+riverctl map normal Super A spawn fuzzel
+riverctl map normal Super+Shift A spawn "fuzzel --list-executables-in-path"
+riverctl map normal Super Escape spawn menusys
+riverctl map normal Super N spawn menunm
+riverctl map normal Super B spawn menubt
+riverctl map normal Super V spawn menuclip
+riverctl map normal Super S spawn menushot
+
 ### VIEWS ###
 
 # Super+Q to close the focused view
