@@ -6,6 +6,7 @@
 
 ## User
 alias shactivate="eval '$(ssh-agent -s)' && ssh-add ~/.ssh/tobytab"
+alias sudo="sudo "
 
 # Dotfiles
 alias dot='/usr/bin/git --git-dir=$HOME/.dots/ --work-tree=$HOME'
