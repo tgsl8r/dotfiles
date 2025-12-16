@@ -6,7 +6,7 @@
   //"width": 1350, // Waybar width
   // Choose the order of the modules idle_inhibitor
   "modules-left": [
-    //"custom/launcher",
+    "custom/launcher",
     "river/tags",
     //"custom/swap",
     "mpd#2",
@@ -17,15 +17,15 @@
   "modules-center": ["clock"],
   "modules-right": [
     //"backlight",
+    "tray",
     "network",
     "pulseaudio",
     "temperature",
     //"custom/clipboard",
     "cpu",
     "memory",
-    "battery"
-    //"tray"
-    //"custom/power"
+    "battery",
+    "custom/power"
   ],
 
   // Modules configuration
@@ -100,7 +100,7 @@
     "spacing": 15
   },
   "clock": {
-    "tooltip-format": "<tt><small>{calendar}</small></tt>",
+    "tooltip-format": "<tt>{calendar}</tt>",
     "calendar": {
       "mode": "month",
       "mode-mon-col": 3,
@@ -222,13 +222,13 @@
     "on-scroll-down": "pamixer -ud 2"
   }, 
  "custom/power": {
-    "format": " ⏻ ",
-    "on-click": "~/.config/river/scripts/rofi_powermenu",
+    "format": "⏻  ",
+    "on-click": "menusys",
     "tooltip": false
   }, 
   "custom/launcher": {
     "format": "||",
-    "on-click": "rofi -show drun",
+    "on-click": "fuzzel",
     "tooltip": false
   },
   "custom/clipboard":{
