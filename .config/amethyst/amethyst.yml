@@ -240,6 +240,11 @@ select-tall-layout:
   mod: mod1
   key: t
 
+# Select column layout
+select-column-layout:
+  mod: mod1
+  key: c
+
 # Select fullscreen (monocle) layout
 select-fullscreen-layout:
   mod: mod1
