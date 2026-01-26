@@ -48,6 +48,8 @@ layouts:
 
 ## Modifiers
 # First mod (default option + shift).
+# This modifier requires Hyperkey program to set Right Command to Ctrl+Opt+Command to use as a window key.
+# Capslock is then bound to escape on tap and Right Command on hold to mimic Esc/Ctrl binding on linux.
 mod1:
   - option
   # - shift
