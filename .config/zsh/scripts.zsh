@@ -4,6 +4,18 @@
 # ░▀▀▀░▀▀▀░▀░▀░▀▀▀░▀░░░░▀░░▀▀▀░
 
 
+# act - activate python venvs
+act() {
+    if [ -f "bin/activate" ]; then
+        echo "Activating bin/activate"
+        source bin/activate
+    elif [ -f "venv/bin/activate" ]; then
+        echo "Activating venv/bin/activate"
+        source venv/bin/activate
+    elif [ -f ".venv/bin/activate" ]; then
+        echo "Activating .venv/bin/activate"
+        source .venv/bin/activate 
+
 # man - Colourized man pages
 man() {
     env \
