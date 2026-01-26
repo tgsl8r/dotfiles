@@ -51,14 +51,14 @@ layouts:
 mod1:
   - option
   # - shift
-  # - control
+  - control
   - command
 
 # Second mod (default option + shift + control).
 mod2:
   - option
   - shift
-  # - control
+  - control
   - command
 
 # Third mod
@@ -119,13 +119,13 @@ expand-main:
 
 # Increase the number of windows in the main pane. Note that not all layouts respond to this command.
 increase-main:
-  mod: mod3
-  key: k
+  mod: mod2
+  key: l
 
 # Decrease the number of windows in the main pane. Note that not all layouts respond to this command.
 decrease-main:
-  mod: mod3
-  key: j
+  mod: mod2
+  key: h
 
 # Toggle the floating state of the currently focused window; i.e., if it was floating make it tiled and if it was tiled make it floating.
 toggle-float:
@@ -256,19 +256,19 @@ select-floating=layout:
 
 # Move to the next layout in the list.
 cycle-layout:
-  mod: mod3
+  mod: mod1
   key: "]"
 
 # Move to the previous layout in the list.
 cycle-layout-backward:
-  mod: mod3
+  mod: mod1
   key: "["
 
 ##########
 ## Utils
 # Turn on or off tiling entirely.
 toggle-tiling:
-  mod: mod3
+  mod: mod1
   key: "|"
 
 # Display the layout HUD with the current layout on each screen.
