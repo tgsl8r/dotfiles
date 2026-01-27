@@ -15,6 +15,10 @@ act() {
     elif [ -f ".venv/bin/activate" ]; then
         echo "Activating .venv/bin/activate"
         source .venv/bin/activate 
+    else
+        echo "No venv found"
+    fi
+}
 
 # man - Colourized man pages
 man() {
