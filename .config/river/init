@@ -154,12 +154,12 @@ riverctl border-color-focused 0xd4be98
 riverctl border-color-unfocused 0x5a524c
 
 # Cursor hiding
-riverctl hide-cursor timeout 1000
+riverctl hide-cursor timeout 10000
 riverctl hide-cursor when-typing enabled
 
 # Keyboard config
 riverctl keyboard-layout us
-riverctl set-repeat 50 300
+riverctl set-repeat 30 300
 
 # Make all views with an app-id that starts with "float" and title "foo" start floating.
 riverctl rule-add -app-id 'float*' -title 'foo' float
