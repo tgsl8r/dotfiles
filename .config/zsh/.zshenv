@@ -20,7 +20,7 @@ export XDG_PROJECTS_DIR=~/projects
 
 # Custom
 export GNUPGHOME=$XDG_DATA_HOME/gnupg
-export GPG_TTY=\$(tty)
+export GPG_TTY=$(tty)
 export REPO_HOME=$XDG_CACHE_HOME/repos
 export DOTFILES=$REPO_HOME/dotfiles
 
