@@ -61,3 +61,4 @@ bindkey -M vicmd "^E" end-of-line
 zstyle :compinstall filename "${ZDOTDIR}/.zshrc"
 autoload -Uz compinit
 compinit
+setopt COMPLETE_ALIASES
