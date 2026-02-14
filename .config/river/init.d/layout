@@ -9,8 +9,8 @@ wideriver \
 	--count-master 1 \
 	--ratio-master 0.5 \
 	--count-wide-left 1 \
-	--inner-gaps 5 \
-	--outer-gaps 5 \
+	--inner-gaps 10 \
+	--outer-gaps 10 \
 	--smart-gaps \
 	--ratio-wide 0.35 \
 	--border-width 3 \
