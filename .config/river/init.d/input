@@ -1,0 +1,22 @@
+#!/bin/sh
+
+# keyboard
+riverctl keyboard-layout us
+riverctl set-repeat 50 300
+
+# mouse
+riverctl input "*Mouse" pointer-accel 0
+riverctl input "*Mouse" accel-profile none
+
+# cursor hiding
+riverctl hide-cursor timeout 10000
+riverctl hide-cursor when-typing enabled
+
+# pads
+riverctl input "*Trackpad" tap enabled
+riverctl input "*Trackpad" click-method clickfinger
+riverctl input "*Trackpad" natural-scroll enabled
+
+riverctl input "*Touchpad" tap enabled
+riverctl input "*Touchpad" click-method clickfinger
+riverctl input "*Touchpad" natural-scroll enabled
