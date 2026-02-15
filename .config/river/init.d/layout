@@ -1,0 +1,31 @@
+#!/bin/sh
+
+# start layout manager
+# valgrind --leak-check=full --show-leak-kinds=all wideriver \
+wideriver \
+	--layout left \
+	--layout-alt monocle \
+	--stack even \
+	--count-master 1 \
+	--ratio-master 0.5 \
+	--count-wide-left 1 \
+	--inner-gaps 10 \
+	--outer-gaps 10 \
+	--smart-gaps \
+	--ratio-wide 0.35 \
+	--border-width 3 \
+	--border-width-monocle 3 \
+	--border-width-smart-gaps 3 \
+    --border-color-focused 0xd4be98 \
+    --border-color-focused-monocle 0x5a524c \
+    --border-color-unfocused 0x5a524c \
+	--log-threshold info \
+	> "/tmp/wideriver.${XDG_VTNR}.${USER}.log" 2>&1 &
+
+# set layout manager
+riverctl default-layout wideriver
+
+# TODO: Colours from env
+	# --border-color-focused "0x${BASE16[dark_foreground]}" \
+	# --border-color-focused-monocle "0x${BASE16[lighter_background]#*#}" \
+	# --border-color-unfocused "0x${BASE16[lighter_background]#*#}" \

@@ -1,0 +1,4 @@
+#! /bin/sh
+
+riverctl background-color 0x333333
+riverctl border-width 0
