@@ -45,7 +45,7 @@
   color: @white; /*@lavender;*/
   border: 0;
   padding: 0 0;
-  margin: -4;
+  margin: -4px;
   font-family: "Atkinson Hyperlegible Nerd Font";
   font-size: 12px;
   /* font-weight: bold; */
@@ -64,20 +64,20 @@ window#waybar {
 }
 
 #tags button {
-  color: @base;
+  color: @white;
   border-radius: 50%;
   /* background-color: @base; */
   margin-left: 5px;
   margin-right: 1px;
-  padding: 0 3 0 3; /*2 6 2 6*/
+  padding: 0px 3px 0px 3px; /*2 6 2 6*/
 }
 
 #tags button.urgent * {
-  color: @base;/*@mauve;*/
+  color: @white;/*@mauve;*/
 }
 
 #tags button.urgent {
-  color: @base;/*@mauve;*/
+  color: @white;/*@mauve;*/
   box-shadow: none;
   /* Remove predefined box-shadow */
   text-shadow: none;

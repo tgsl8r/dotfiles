@@ -45,7 +45,7 @@
     "on-click": "mpc toggle",
     "state-icons": {
       "playing": "",
-      "paused": ""
+      "paused": ""
     }
   },
   "mpd#2": {
