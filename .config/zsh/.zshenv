@@ -48,6 +48,8 @@ path=(
   /usr/local/{,s}bin(N)
   $HOME/.local/{,s}bin(N)
   # apps
+  $HOME/.ghcup/bin(N)
+  $HOME/.cargo/bin(N)
   $HOME/.gem/ruby/*/bin(N)
   # path
   $path
