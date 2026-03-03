@@ -12,8 +12,10 @@
    * Base styles
    * -------------------------------------------------------------------------- */
 
-/* Reset all styles */
+/* Ignore GTK theme */
+* { all: initial; }
 
+/* Defaults */
 * {
   color: @white; /*@lavender;*/
   border: 0;
