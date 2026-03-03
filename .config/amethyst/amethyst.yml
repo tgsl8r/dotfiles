@@ -205,12 +205,12 @@ focus-screen-3:
 # Focus the next screen in the list going counter-clockwise.
 focus-screen-ccw:
   mod: mod1
-  key: ","
+  key: "["
 
 # Focus the next screen in the list going clockwise.
 focus-screen-cw:
   mod: mod1
-  key: "."
+  key: "]"
 
 # Move currently focused window to specific screen.
 throw-screen-1:
@@ -228,12 +228,12 @@ throw-screen-3:
 # Move the currently focused window onto the next screen in the list going counter-clockwise.
 swap-screen-ccw:
   mod: mod2
-  key: ","
+  key: "["
 
 # Move the currently focused window onto the next screen in the list going clockwise.
 swap-screen-cw:
   mod: mod2
-  key: "."
+  key: "]"
 
 ##########
 ## Layouts
@@ -259,12 +259,12 @@ select-floating=layout:
 # Move to the next layout in the list.
 cycle-layout:
   mod: mod1
-  key: "]"
+  key: "."
 
 # Move to the previous layout in the list.
 cycle-layout-backward:
   mod: mod1
-  key: "["
+  key: ","
 
 ##########
 ## Utils
