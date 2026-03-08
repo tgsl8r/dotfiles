@@ -13,32 +13,25 @@ Row {
     property int urgentTags: 0
 
     // Poll river for tag state
-    Process {
-        id: tagProcess
-        command: ["sh", "-c", "riverctl list-tags 2>/dev/null || echo 0"]
-        running: true
-        stdout: SplitParser {
-            onRead: (line) => {
-                // River doesn't have a simple list-tags; we poll focused/occupied state
-            }
-        }
-    }
-
-    // Use river's status protocol via polling
+    // River's native status protocol (river-status-unstable-v1) would be more
+    // efficient but requires a dedicated Wayland protocol client. Polling at 1s
+    // is a reasonable compromise for responsiveness vs CPU usage.
     Timer {
-        interval: 250
+        interval: 1000
         running: true
         repeat: true
+        triggeredOnStart: true
         onTriggered: {
             focusedProcess.running = true;
             occupiedProcess.running = true;
+            urgentProcess.running = true;
         }
     }
 
     Process {
         id: focusedProcess
         command: ["sh", "-c", "riverctl get-focused-tags 2>/dev/null || echo 1"]
-        running: true
+        running: false
         stdout: SplitParser {
             onRead: (line) => {
                 const val = parseInt(line.trim());
@@ -50,7 +43,7 @@ Row {
     Process {
         id: occupiedProcess
         command: ["sh", "-c", "riverctl get-occupied-tags 2>/dev/null || echo 0"]
-        running: true
+        running: false
         stdout: SplitParser {
             onRead: (line) => {
                 const val = parseInt(line.trim());
@@ -62,7 +55,7 @@ Row {
     Process {
         id: urgentProcess
         command: ["sh", "-c", "riverctl get-urgent-tags 2>/dev/null || echo 0"]
-        running: true
+        running: false
         stdout: SplitParser {
             onRead: (line) => {
                 const val = parseInt(line.trim());

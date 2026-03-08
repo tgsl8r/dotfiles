@@ -193,16 +193,18 @@ Item {
                     }
                 }
 
-                // Handle h/l for volume control
+                // Handle h/l for volume adjustment at volume rows
                 Keys.onPressed: (event) => {
                     if (event.key === Qt.Key_H) {
                         volDownProcess.running = true;
                         event.accepted = true;
                     } else if (event.key === Qt.Key_L) {
-                        // Override L only for volume at header positions
+                        // At volume header rows, L adjusts volume up instead of selecting
                         if (popupContent.currentIndex === 0 || popupContent.currentIndex === root.sinkList.length + 1) {
-                            // Do not capture L at headers - let it fall through to action
+                            volUpProcess.running = true;
+                            event.accepted = true;
                         }
+                        // Otherwise let L fall through to PopupFrame for select action
                     }
                 }
 
@@ -476,6 +478,12 @@ Item {
     Process {
         id: volDownProcess
         command: ["wpctl", "set-volume", "@DEFAULT_AUDIO_SINK@", "2%-"]
+        running: false
+    }
+
+    Process {
+        id: volUpProcess
+        command: ["wpctl", "set-volume", "-l", "1.5", "@DEFAULT_AUDIO_SINK@", "2%+"]
         running: false
     }
 }
