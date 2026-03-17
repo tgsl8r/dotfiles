@@ -20,6 +20,20 @@ act() {
     fi
 }
 
+# gb - open a web hosted git remote branch in a browser
+gbo() {
+  local url=$(git remote get-url origin | sed 's|git@\([^:]*\):|https://\1/|;s|\.git$||')
+  local branch=$(git branch --show-current)
+  open "$url/tree/$branch"
+}
+
+# gpr - Open a PR for current branch in a web hosted git remote
+gpr() {
+  local url=$(git remote get-url origin | sed 's|git@\([^:]*\):|https://\1/|;s|\.git$||')
+  local branch=$(git branch --show-current)
+  open "$url/pull/new/$branch"
+}
+
 # man - Colourized man pages
 man() {
     env \
