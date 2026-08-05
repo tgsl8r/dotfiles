@@ -152,7 +152,7 @@ function tmx {
 }
 
 # Autostart if not already in tmux and enabled.
-if [[ -z "$TMUX" && "$ZSH_TMUX_AUTOSTART" == "true" && -z "$INSIDE_EMACS" && -z "$EMACS" && -z "$VIM" && -z "$INTELLIJ_ENVIRONMENT_READER" ]]; then
+if [[ -z "$TMUX" && "$ZSH_TMUX_AUTOSTART" == "true" && -z "$INSIDE_EMACS" && -z "$EMACS" && -z "$VIM" && -z "$INTELLIJ_ENVIRONMENT_READER" && -z "$VSCODE_INJECTION" && "$TERM_PROGRAM" != "vscode" ]]; then
   # Actually don't autostart if we already did and multiple autostarts are disabled.
   if [[ "$ZSH_TMUX_AUTOSTART_ONCE" == "false" || "$ZSH_TMUX_AUTOSTARTED" != "true" ]]; then
     export ZSH_TMUX_AUTOSTARTED=true
