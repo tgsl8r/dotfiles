@@ -9,6 +9,6 @@ mime-update
 
 mako > "/tmp/mako.${XDG_VTNR}.${USER}.log" 2>&1 &
 swayidle > "/tmp/swayidle.${XDG_VTNR}.${USER}.log" 2>&1 &
-waybar > "/tmp/waybar.${XDG_VTNR}.${USER}.log" 2>&1 &
+quickshell > "/tmp/quickshell.${XDG_VTNR}.${USER}.log" 2>&1 &
 
 wl-copy --watch cliphist store

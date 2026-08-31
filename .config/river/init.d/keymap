@@ -8,8 +8,9 @@ riverctl map normal Super+Shift Escape exit
 riverctl map normal Super A spawn fuzzel
 riverctl map normal Super+Shift A spawn "fuzzel --list-executables-in-path"
 riverctl map normal Super Escape spawn menusys
-riverctl map normal Super N spawn menunm
-riverctl map normal Super B spawn menubt
+riverctl map normal Super+Shift N spawn 'quickshell ipc call bar toggleNetwork'
+riverctl map normal Super+Shift B spawn 'quickshell ipc call bar toggleBluetooth'
+riverctl map normal Super+Shift P spawn 'quickshell ipc call bar toggleAudio'
 riverctl map normal Super V spawn menuclip
 riverctl map normal Super S spawn menushot
 
