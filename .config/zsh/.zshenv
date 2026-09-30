@@ -41,6 +41,10 @@ cdpath=(
   $cdpath
 )
 
+# Android sdk
+export ANDROID_HOME=$HOME/Library/Android/sdk
+export ANDROID_USER_HOME=$HOME/.android
+
 # Set the list of directories that Zsh searches for programs.
 path=(
   # core
@@ -51,6 +55,10 @@ path=(
   $HOME/.ghcup/bin(N)
   $HOME/.cargo/bin(N)
   $HOME/.gem/ruby/*/bin(N)
+  # android sdk
+  $ANDROID_HOME/emulator
+  $ANDROID_HOME/platform-tools
+  $ANDROID_HOME/cmdline-tools/latest/bin
   # path
   $path
 )
