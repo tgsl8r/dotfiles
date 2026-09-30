@@ -10,6 +10,7 @@ source "${ZDOTDIR}/scripts.zsh"
 source "${ZDOTDIR}/completion.zsh"
 source "${ZDOTDIR}/prompt.zsh"
 
+[[ -d $ZDOTDIR/work.zsh ]] && source "${ZDOTDIR}/work.zsh"
 
 # Mac/linux specific settings
 if [[ $(uname) == "Darwin" ]]; then
