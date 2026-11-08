@@ -32,7 +32,7 @@
     # Menus
     bindsym Mod4+a exec $menu
     bindsym Mod4+Shift+a exec $menu --list-executables-in-path
-    bindsym Mod4+Escape exec menusys
+    bindsym Mod4+Escape exec ~/.local/bin/menusys
     bindsym Mod4+n exec menunm
     bindsym Mod4+b exec menubt
     bindsym Mod4+v exec menuclip
@@ -48,30 +48,6 @@
     # Reload the configuration file
     bindsym Mod4+Shift+r reload
     bindsym Mod4+Shift+e exec $term -e v ~/.config/sway/config
-
-#
-# Main Utilities
-#
-    bindsym Mod4+u exec unmount.sh
-    bindsym Mod4+u exec unmount.sh
-    bindsym Mod4+x exec clipman pick --max-items=50 -t bemenu -T"-l 0 -p 'Clipboard'"
-    bindsym Mod4+Shift+c exec colorpicker.sh
-    bindsym Mod4+Shift+z exec mag.sh
-    bindsym Mod4+Shift+m exec emote
-    bindsym Mod4+Control+w exec wttr
-    bindsym Mod4+b exec ~/.config/yambar/launch.sh -t
-
-    bindsym Control+grave exec notif_hist.sh -q
-    bindsym Control+space exec notif_hist.sh -c
-
-    bindsym Mod4+Control+Mod1+Left exec playerctl previous
-    bindsym Mod4+Control+Mod1+Right exec playerctl next
-    bindsym Mod4+Control+Mod1+Up exec playerctl play-pause
-    bindsym Mod4+Control+Mod1+Down exec playerctl stop
-    bindsym Mod4+Control+Mod1+h exec playerctl previous
-    bindsym Mod4+Control+Mod1+l exec playerctl next
-    bindsym Mod4+Control+Mod1+k exec playerctl play-pause
-    bindsym Mod4+Control+Mod1+j exec playerctl stop
 
 #
 # Windows
@@ -133,10 +109,10 @@
     bindsym Mod4+Tab layout toggle split tabbed
 
     # Make the current focus fullscreen
-    bindsym Mod4+f floating toggle
+    bindsym Mod4+Shift+f floating toggle
 
     # Toggle the current focus between tiling and floating mode
-    bindsym Mod4+Shift+f fullscreen
+    bindsym Mod4+f fullscreen
 
     # Swap focus between the tiling area and the floating area
     bindsym Mod4+Shift+w focus mode_toggle
