@@ -10,6 +10,7 @@ source "${ZDOTDIR}/scripts.zsh"
 source "${ZDOTDIR}/completion.zsh"
 source "${ZDOTDIR}/prompt.zsh"
 
+[[ -d $ZDOTDIR/work.zsh ]] && source "${ZDOTDIR}/work.zsh"
 
 # Mac/linux specific settings
 if [[ $(uname) == "Darwin" ]]; then
@@ -32,7 +33,6 @@ source "${ZDOTDIR}/plugins/tmux.zsh"
 export PYENV_ROOT="$HOME/.pyenv"
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
 [[ -d $PYENV_ROOT/bin ]] && eval "$(pyenv init -)"
-
 
 ## Shell options
 unsetopt beep

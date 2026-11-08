@@ -29,6 +29,7 @@ alias v="/usr/local/bin/nvim"
 alias vz="NVIM_APPNAME=nvim-lazy /usr/bin/nvim"
 alias vm="/opt/homebrew/bin/nvim"
 alias vzm="NVIM_APPNAME=nvim-lazy /opt/homebrew/bin/nvim"
+alias c="code --user-data-dir ~/.config/Code"
 
 # todo.sh
 alias t="todo.sh"
